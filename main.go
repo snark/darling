@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"flag"
 	"fmt"
 	"github.com/gorilla/feeds"
@@ -8,6 +9,7 @@ import (
 	"github.com/snark/darling/pkg/filter"
 	"log"
 	"net/url"
+	"sort"
 	"strings"
 	"sync"
 	"time"
@@ -58,7 +60,10 @@ func main() {
 		}
 	}
 	wg.Wait()
-	// TODO: Sort items
+	sort.SliceStable(outfeed.Items, func(a, b int) bool {
+		return outfeed.Items[a].Created.Before(outfeed.Items[b].Created)
+	})
+
 	atom, err := outfeed.ToAtom()
 	if err != nil {
 		log.Fatal(err)
@@ -71,6 +76,17 @@ func main() {
 func validateUrl(toTest string) bool {
 	uri, err := url.Parse(toTest)
 	return err == nil && (uri.Scheme == "http" || uri.Scheme == "https")
+}
+
+func timeMultiparser(s string) (time.Time, error) {
+	toTry := [3]string{time.RFC3339, time.RFC1123Z, time.RFC1123}
+	for i := range toTry {
+		t, err := time.Parse(toTry[i], s)
+		if err == nil {
+			return t, err
+		}
+	}
+	return time.Now(), errors.New("Unable to parse " + s)
 }
 
 func parseFeedWithFilters(url string, blacklistFilter filter.ItemFilter, whitelistFilter filter.ItemFilter) []*feeds.Item {
@@ -103,13 +119,14 @@ func parseFeedWithFilters(url string, blacklistFilter filter.ItemFilter, whiteli
 					Link:        &feeds.Link{Href: item.Link},
 					Title:       item.Title,
 				}
-				created, err := time.Parse(time.RFC3339, item.Published)
+				created, err := timeMultiparser(item.Published)
 				if err == nil {
 					newitem.Created = created
 				} else {
+					fmt.Println(err)
 					newitem.Created = time.Now()
 				}
-				updated, err := time.Parse(time.RFC3339, item.Updated)
+				updated, err := timeMultiparser(item.Updated)
 				if err == nil {
 					newitem.Updated = updated
 				}
