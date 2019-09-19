@@ -1,4 +1,4 @@
-package darling
+package filter
 
 import (
 	"github.com/mmcdole/gofeed"
@@ -6,39 +6,39 @@ import (
 )
 
 type ItemFilter interface {
-	match(gofeed.Item) bool
+	Match(gofeed.Item) bool
 }
 
 type RegexpFilter struct {
-	regexps []*regex.Regexp
+	regexps []*regexp.Regexp
 }
 
 type TrueFilter struct {
 }
 
-func (filter TrueFilter) match(gofeed.Item) bool {
+func (filter TrueFilter) Match(i gofeed.Item) bool {
 	return true
 }
 
-func (filter RegexpFilter) match(gofeed.Item) bool {
+func (filter RegexpFilter) Match(i gofeed.Item) bool {
 	// TODO: Does not currently handle item.Categories
 	found := false
 	for _, re := range filter.regexps {
-		if re.MatchString(item.Content) {
+		if re.MatchString(i.Content) {
 			found = true
-		} else if re.MatchString(item.Title) {
+		} else if re.MatchString(i.Title) {
 			found = true
-		} else if re.MatchString(item.Description) {
+		} else if re.MatchString(i.Description) {
 			found = true
 		}
 	}
 	return found
 }
 
-func NewRegexpFilter(words []string) *ItemFilter {
+func NewRegexpFilter(words []string) ItemFilter {
 	wildcard := false
 	for _, word := range words {
-		if word == '*' {
+		if word == "*" {
 			wildcard = true
 			break
 		}
@@ -55,6 +55,6 @@ func NewRegexpFilter(words []string) *ItemFilter {
 				reSlice = append(reSlice, re)
 			}
 		}
-		return RegexFilter{regexps: reSlice}
+		return RegexpFilter{regexps: reSlice}
 	}
 }

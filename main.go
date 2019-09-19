@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"github.com/gorilla/feeds"
 	"github.com/mmcdole/gofeed"
+	"github.com/snark/darling/pkg/filter"
 	"log"
 	"net/url"
-	"regexp"
 	"strings"
 	"sync"
 	"time"
@@ -34,8 +34,8 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	blacklistRegexps := wordsToRegexps(blacklistWords)
-	whitelistRegexps := wordsToRegexps(whitelistWords)
+	blacklistFilter := filter.NewRegexpFilter(blacklistWords)
+	whitelistFilter := filter.NewRegexpFilter(whitelistWords)
 
 	now := time.Now()
 	outfeed := &feeds.Feed{
@@ -53,28 +53,19 @@ func main() {
 			wg.Add(1)
 			go func() {
 				defer wg.Done()
-				outfeed.Items = append(outfeed.Items, parseFeedWithFilters(url, blacklistRegexps, whitelistRegexps)...)
+				outfeed.Items = append(outfeed.Items, parseFeedWithFilters(url, blacklistFilter, whitelistFilter)...)
 			}()
 		}
 	}
 	wg.Wait()
+	// TODO: Sort items
 	atom, err := outfeed.ToAtom()
 	if err != nil {
 		log.Fatal(err)
 	}
+	// TODO: Handle error
 	_ = atom
 	fmt.Println(atom)
-}
-
-func wordsToRegexps(words []string) []*regexp.Regexp {
-	outslice := []*regexp.Regexp{}
-	for _, word := range words {
-		var re, err = regexp.Compile(`(?i)\b` + word + `\b`)
-		if err == nil {
-			outslice = append(outslice, re)
-		}
-	}
-	return outslice
 }
 
 func validateUrl(toTest string) bool {
@@ -82,20 +73,7 @@ func validateUrl(toTest string) bool {
 	return err == nil && (uri.Scheme == "http" || uri.Scheme == "https")
 }
 
-func itemMatchesRegexp(item *gofeed.Item, re *regexp.Regexp) bool {
-	// Does not currently handle item.Categories
-	found := false
-	if re.MatchString(item.Content) {
-		found = true
-	} else if re.MatchString(item.Title) {
-		found = true
-	} else if re.MatchString(item.Description) {
-		found = true
-	}
-	return found
-}
-
-func parseFeedWithFilters(url string, blacklistRegexps []*regexp.Regexp, whitelistRegexps []*regexp.Regexp) []*feeds.Item {
+func parseFeedWithFilters(url string, blacklistFilter filter.ItemFilter, whitelistFilter filter.ItemFilter) []*feeds.Item {
 	fp := gofeed.NewParser()
 	parsed, err := fp.ParseURL(url)
 	items := []*feeds.Item{}
@@ -105,20 +83,14 @@ func parseFeedWithFilters(url string, blacklistRegexps []*regexp.Regexp, whiteli
 		for _, item := range parsed.Items {
 			blacklisted := false
 			whitelisted := false
-			for _, blacklistRe := range blacklistRegexps {
-				if itemMatchesRegexp(item, blacklistRe) {
-					blacklisted = true
-					break
-				}
+			if blacklistFilter.Match(*item) {
+				blacklisted = true
 			}
-			for _, whitelistWord := range whitelistRegexps {
-				if itemMatchesRegexp(item, whitelistWord) {
-					whitelisted = true
-					break
-				}
+			if whitelistFilter.Match(*item) {
+				whitelisted = true
 			}
 			if !blacklisted || whitelisted {
-				// Currently unhandled:
+				// TODO: Currently unhandled:
 				// * Author
 				// * Enclosures
 				// * Categories
@@ -134,6 +106,8 @@ func parseFeedWithFilters(url string, blacklistRegexps []*regexp.Regexp, whiteli
 				created, err := time.Parse(time.RFC3339, item.Published)
 				if err == nil {
 					newitem.Created = created
+				} else {
+					newitem.Created = time.Now()
 				}
 				updated, err := time.Parse(time.RFC3339, item.Updated)
 				if err == nil {
