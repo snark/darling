@@ -1,7 +1,6 @@
 package darling
 
 import (
-	"errors"
 	"fmt"
 	"github.com/gorilla/feeds"
 	"github.com/mmcdole/gofeed"
@@ -40,8 +39,9 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []st
 		}
 	}
 	wg.Wait()
+	// Reverse chronological order
 	sort.SliceStable(outfeed.Items, func(a, b int) bool {
-		return outfeed.Items[a].Created.Before(outfeed.Items[b].Created)
+		return outfeed.Items[a].Created.After(outfeed.Items[b].Created)
 	})
 
 	atom, err := outfeed.ToAtom()
@@ -56,17 +56,6 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []st
 func validateUrl(toTest string) bool {
 	uri, err := url.Parse(toTest)
 	return err == nil && (uri.Scheme == "http" || uri.Scheme == "https")
-}
-
-func timeMultiparser(s string) (time.Time, error) {
-	toTry := [3]string{time.RFC3339, time.RFC1123Z, time.RFC1123}
-	for i := range toTry {
-		t, err := time.Parse(toTry[i], s)
-		if err == nil {
-			return t, err
-		}
-	}
-	return time.Now(), errors.New("Unable to parse " + s)
 }
 
 func parseFeedWithFilters(url string, blacklistFilter filter.ItemFilter, whitelistFilter filter.ItemFilter) []*feeds.Item {
@@ -99,16 +88,13 @@ func parseFeedWithFilters(url string, blacklistFilter filter.ItemFilter, whiteli
 					Link:        &feeds.Link{Href: item.Link},
 					Title:       item.Title,
 				}
-				created, err := timeMultiparser(item.Published)
-				if err == nil {
-					newitem.Created = created
+				if item.PublishedParsed != nil {
+					newitem.Created = *item.PublishedParsed
 				} else {
-					fmt.Println(err)
 					newitem.Created = time.Now()
 				}
-				updated, err := timeMultiparser(item.Updated)
-				if err == nil {
-					newitem.Updated = updated
+				if item.UpdatedParsed != nil {
+					newitem.Updated = *item.UpdatedParsed
 				}
 				items = append(items, newitem)
 			}
