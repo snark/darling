@@ -49,10 +49,10 @@ func TestRegexpFilterBasic(t *testing.T) {
 		{9, false},
 		{10, false},
 		{11, false},
-		{12, true},
+		{12, true}, // package
 		{13, false}, // "potentially" -- word boundaries
 		{14, false},
-		{15, true},
+		{15, true}, // package
 	}
 	for _, tt := range tests {
 		testname := fmt.Sprintf("Lobste.rs Item #%d", tt.i)
