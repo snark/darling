@@ -5,6 +5,7 @@ import (
 	"github.com/gorilla/feeds"
 	"github.com/mmcdole/gofeed"
 	"github.com/snark/darling/pkg/filter"
+	"github.com/snark/darling/pkg/process"
 	"log"
 	"net/url"
 	"sort"
@@ -65,40 +66,7 @@ func parseFeedWithFilters(url string, blacklistFilter filter.ItemFilter, whiteli
 	if err != nil {
 		fmt.Println("unable to parse %s--skipping with error %s", url, err)
 	} else {
-		for _, item := range parsed.Items {
-			blacklisted := false
-			whitelisted := false
-			if blacklistFilter.Match(*item) {
-				blacklisted = true
-			}
-			if whitelistFilter.Match(*item) {
-				whitelisted = true
-			}
-			if !blacklisted || whitelisted {
-				// TODO: Currently unhandled:
-				// * Author
-				// * Enclosures
-				// * Categories
-				// * Extensions
-				newitem := &feeds.Item{
-					//Author: item.Author,
-					Content:     item.Content,
-					Description: item.Description,
-					Id:          item.GUID,
-					Link:        &feeds.Link{Href: item.Link},
-					Title:       item.Title,
-				}
-				if item.PublishedParsed != nil {
-					newitem.Created = *item.PublishedParsed
-				} else {
-					newitem.Created = time.Now()
-				}
-				if item.UpdatedParsed != nil {
-					newitem.Updated = *item.UpdatedParsed
-				}
-				items = append(items, newitem)
-			}
-		}
+		items = process.ProcessItems(parsed.Items, []filter.ItemFilter{blacklistFilter}, []filter.ItemFilter{whitelistFilter})
 	}
 	return items
 }
