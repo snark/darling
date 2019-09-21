@@ -49,7 +49,7 @@ func TestRegexpFilterBasic(t *testing.T) {
 		{9, false},
 		{10, false},
 		{11, false},
-		{12, true}, // package
+		{12, true},  // package
 		{13, false}, // "potentially" -- word boundaries
 		{14, false},
 		{15, true}, // package
