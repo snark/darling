@@ -3,6 +3,7 @@ package filter
 import (
 	"github.com/mmcdole/gofeed"
 	"regexp"
+	"strings"
 )
 
 type ItemFilter interface {
@@ -20,8 +21,8 @@ func (filter TrueFilter) Match(i gofeed.Item) bool {
 	return true
 }
 
+// TODO: Does not currently handle item.Categories
 func (filter RegexpFilter) Match(i gofeed.Item) bool {
-	// TODO: Does not currently handle item.Categories
 	found := false
 	for _, re := range filter.regexps {
 		if re.MatchString(i.Content) {
@@ -35,6 +36,8 @@ func (filter RegexpFilter) Match(i gofeed.Item) bool {
 	return found
 }
 
+// TODO: Allow case-sensitive matching?
+// TODO: Log error
 func NewRegexpFilter(words []string) ItemFilter {
 	wildcard := false
 	for _, word := range words {
@@ -48,11 +51,13 @@ func NewRegexpFilter(words []string) ItemFilter {
 	} else {
 		reSlice := []*regexp.Regexp{}
 		for _, word := range words {
-			// TODO: Allow case-sensitive matching?
-			var re, err = regexp.Compile(`(?i)\b` + word + `\b`)
-			// TODO: Log error
-			if err == nil {
-				reSlice = append(reSlice, re)
+			word = strings.TrimSpace(word)
+			// Silently discard empty/whitespace strings
+			if word != "" {
+				var re, err = regexp.Compile(`(?i)\b` + word + `\b`)
+				if err == nil {
+					reSlice = append(reSlice, re)
+				}
 			}
 		}
 		return RegexpFilter{regexps: reSlice}

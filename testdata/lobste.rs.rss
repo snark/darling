@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lobsters</title>
+    <description></description>
+    <link>https://lobste.rs/</link>
+    <atom:link href="https://lobste.rs/rss" rel="self" type="application/rss+xml" />
+
+      <item>
+        <title>&#39;Everyone Should Have a Moral Code&#39; Says Developer Who Deleted Code Sold to ICE</title>
+        <link>https://www.vice.com/en_us/article/mbm3xn/chef-sugar-author-deletes-code-sold-to-ice-immigration-customs-enforcement</link>
+        <guid isPermaLink="false">https://lobste.rs/s/yy5vf0</guid>
+        <author>noelle@users.lobste.rs (noelle)</author>
+        <pubDate>Fri, 20 Sep 2019 18:16:04 -0500</pubDate>
+        <comments>https://lobste.rs/s/yy5vf0/everyone_should_have_moral_code_says</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/yy5vf0/everyone_should_have_moral_code_says&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>philosophy</category>
+          <category>programming</category>
+      </item>
+      <item>
+        <title>What are you doing this weekend?</title>
+        <link>https://lobste.rs/s/fbkjhk/what_are_you_doing_this_weekend</link>
+        <guid isPermaLink="false">https://lobste.rs/s/fbkjhk</guid>
+        <author>caius@users.lobste.rs (caius)</author>
+        <pubDate>Fri, 20 Sep 2019 08:47:45 -0500</pubDate>
+        <comments>https://lobste.rs/s/fbkjhk/what_are_you_doing_this_weekend</comments>
+        <description>
+          &#60;p&#62;Feel free to tell what you plan on doing this weekend and even ask for help or feedback.&#60;/p&#62;&#10;&#60;p&#62;Please keep in mind it&#8217;s more than OK to do nothing at all too!&#60;/p&#62;&#10;
+        </description>
+          <category>programming</category>
+          <category>ask</category>
+      </item>
+      <item>
+        <title>The Vim-Inspired Editor with a Linguistic Twist</title>
+        <link>https://cosine.blue/2019-09-06-kakoune.html</link>
+        <guid isPermaLink="false">https://lobste.rs/s/rukhsx</guid>
+        <author>TeddyDD@users.lobste.rs (TeddyDD)</author>
+        <pubDate>Fri, 20 Sep 2019 12:08:34 -0500</pubDate>
+        <comments>https://lobste.rs/s/rukhsx/vim_inspired_editor_with_linguistic</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/rukhsx/vim_inspired_editor_with_linguistic&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>vim</category>
+          <category>unix</category>
+      </item>
+      <item>
+        <title>When TCP sockets refuse to die</title>
+        <link>https://blog.cloudflare.com/when-tcp-sockets-refuse-to-die/</link>
+        <guid isPermaLink="false">https://lobste.rs/s/kgplwx</guid>
+        <author>majke@users.lobste.rs (majke)</author>
+        <pubDate>Fri, 20 Sep 2019 11:44:40 -0500</pubDate>
+        <comments>https://lobste.rs/s/kgplwx/when_tcp_sockets_refuse_die</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/kgplwx/when_tcp_sockets_refuse_die&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>linux</category>
+          <category>networking</category>
+          <category>api</category>
+          <category>programming</category>
+      </item>
+      <item>
+        <title>Reinventing Home Directories &#8211; systemd-homed</title>
+        <link>https://cfp.all-systems-go.io/media/homed-asg2019.pdf</link>
+        <guid isPermaLink="false">https://lobste.rs/s/fwt85q</guid>
+        <author>kragniz@users.lobste.rs (kragniz)</author>
+        <pubDate>Fri, 20 Sep 2019 05:55:49 -0500</pubDate>
+        <comments>https://lobste.rs/s/fwt85q/reinventing_home_directories_systemd</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/fwt85q/reinventing_home_directories_systemd&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>pdf</category>
+          <category>linux</category>
+          <category>systemd</category>
+      </item>
+      <item>
+        <title>v0.4.0 of Gleam, the statically typed language for the Erlang VM, is out</title>
+        <link>https://lpil.uk/blog/gleam-v0.4-released/</link>
+        <guid isPermaLink="false">https://lobste.rs/s/doosz2</guid>
+        <author>lpil@users.lobste.rs (lpil)</author>
+        <pubDate>Thu, 19 Sep 2019 16:11:01 -0500</pubDate>
+        <comments>https://lobste.rs/s/doosz2/v0_4_0_gleam_statically_typed_language_for</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/doosz2/v0_4_0_gleam_statically_typed_language_for&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>release</category>
+          <category>erlang</category>
+          <category>plt</category>
+      </item>
+      <item>
+        <title>issue-bot, a bot to handle bug reports through mail for gitea&#39;s issue tracker</title>
+        <link>https://github.com/meli/issue-bot</link>
+        <guid isPermaLink="false">https://lobste.rs/s/cp1m9k</guid>
+        <author>epilys@users.lobste.rs (epilys)</author>
+        <pubDate>Fri, 20 Sep 2019 14:41:35 -0500</pubDate>
+        <comments>https://lobste.rs/s/cp1m9k/issue_bot_bot_handle_bug_reports_through</comments>
+        <description>
+          &#60;p&#62;I needed a quick and dirty solution to handle bug reports without requiring users to register in the gitea instance, but also keep track of them in gitea&#8217;s issue tracker. Eventually I&#8217;d like to move the issue tracking to something else, but this was quicker. Haven&#8217;t deployed it in production yet. Yes I&#8217;m a bit worried about junk submissions!&#60;/p&#62;&#10;
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/cp1m9k/issue_bot_bot_handle_bug_reports_through&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>release</category>
+          <category>show</category>
+          <category>vcs</category>
+          <category>rust</category>
+          <category>email</category>
+      </item>
+      <item>
+        <title>async.h - asynchronous, stackless subroutines in C</title>
+        <link>https://higherlogics.blogspot.com/2019/09/asynch-asynchronous-stackless.html</link>
+        <guid isPermaLink="false">https://lobste.rs/s/rqw2ky</guid>
+        <author>calvin@users.lobste.rs (calvin)</author>
+        <pubDate>Fri, 20 Sep 2019 19:36:16 -0500</pubDate>
+        <comments>https://lobste.rs/s/rqw2ky/async_h_asynchronous_stackless</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/rqw2ky/async_h_asynchronous_stackless&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>c</category>
+          <category>release</category>
+      </item>
+      <item>
+        <title>Introducing Ristretto: A High-Performance Go Cache</title>
+        <link>https://blog.dgraph.io/post/introducing-ristretto-high-perf-go-cache/</link>
+        <guid isPermaLink="false">https://lobste.rs/s/k0yylk</guid>
+        <author>ksm@users.lobste.rs (ksm)</author>
+        <pubDate>Fri, 20 Sep 2019 12:47:08 -0500</pubDate>
+        <comments>https://lobste.rs/s/k0yylk/introducing_ristretto_high_performance</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/k0yylk/introducing_ristretto_high_performance&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>go</category>
+      </item>
+      <item>
+        <title>Notes on data modeling from Handbook of Relational Database Design</title>
+        <link>https://lethain.com//handbook-relational-db-design-on-data-modeling/</link>
+        <guid isPermaLink="false">https://lobste.rs/s/fanuhi</guid>
+        <author>adsouza@users.lobste.rs (adsouza)</author>
+        <pubDate>Fri, 20 Sep 2019 06:47:43 -0500</pubDate>
+        <comments>https://lobste.rs/s/fanuhi/notes_on_data_modeling_from_handbook</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/fanuhi/notes_on_data_modeling_from_handbook&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>databases</category>
+      </item>
+      <item>
+        <title>Why are large companies so difficult to rescue (regarding bad internal technology)</title>
+        <link>http://www.smashcompany.com/business/why-are-large-companies-so-difficult-to-rescue-regarding-bad-internal-technology</link>
+        <guid isPermaLink="false">https://lobste.rs/s/cnmww4</guid>
+        <author>mooreds@users.lobste.rs (mooreds)</author>
+        <pubDate>Fri, 20 Sep 2019 09:50:29 -0500</pubDate>
+        <comments>https://lobste.rs/s/cnmww4/why_are_large_companies_so_difficult</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/cnmww4/why_are_large_companies_so_difficult&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>api</category>
+          <category>practices</category>
+      </item>
+      <item>
+        <title>Introduction to the Model-View-Update pattern</title>
+        <link>https://elmprogramming.com/model-view-update-part-1.html</link>
+        <guid isPermaLink="false">https://lobste.rs/s/qlzlkz</guid>
+        <author>pottereric@users.lobste.rs (pottereric)</author>
+        <pubDate>Fri, 20 Sep 2019 08:19:27 -0500</pubDate>
+        <comments>https://lobste.rs/s/qlzlkz/introduction_model_view_update_pattern</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/qlzlkz/introduction_model_view_update_pattern&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>web</category>
+          <category>programming</category>
+      </item>
+      <item>
+        <title>So you want to write a package manager</title>
+        <link>https://medium.com/@sdboyer/so-you-want-to-write-a-package-manager-4ae9c17d9527</link>
+        <guid isPermaLink="false">https://lobste.rs/s/20ernq</guid>
+        <author>qznc@users.lobste.rs (qznc)</author>
+        <pubDate>Fri, 20 Sep 2019 14:43:46 -0500</pubDate>
+        <comments>https://lobste.rs/s/20ernq/so_you_want_write_package_manager</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/20ernq/so_you_want_write_package_manager&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>practices</category>
+          <category>programming</category>
+      </item>
+      <item>
+        <title>An HTML attribute potentially worth $4.4M to Chipotle</title>
+        <link>https://cloudfour.com/thinks/an-html-attribute-potentially-worth-4-4m-to-chipotle/</link>
+        <guid isPermaLink="false">https://lobste.rs/s/n421zm</guid>
+        <author>mt@users.lobste.rs (mt)</author>
+        <pubDate>Fri, 20 Sep 2019 11:25:48 -0500</pubDate>
+        <comments>https://lobste.rs/s/n421zm/html_attribute_potentially_worth_4_4m</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/n421zm/html_attribute_potentially_worth_4_4m&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>web</category>
+          <category>a11y</category>
+      </item>
+      <item>
+        <title>Next browser 1.3.2: Hooks, file manager and clipboard ring</title>
+        <link>https://next.atlas.engineer/article/release-1.3.2.org</link>
+        <guid isPermaLink="false">https://lobste.rs/s/sqzyjs</guid>
+        <author>Ambrevar@users.lobste.rs (Ambrevar)</author>
+        <pubDate>Fri, 20 Sep 2019 01:39:48 -0500</pubDate>
+        <comments>https://lobste.rs/s/sqzyjs/next_browser_1_3_2_hooks_file_manager</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/sqzyjs/next_browser_1_3_2_hooks_file_manager&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>lisp</category>
+          <category>browsers</category>
+          <category>emacs</category>
+      </item>
+      <item>
+        <title>Lua package manager</title>
+        <link>https://github.com/ikouchiha47/lpm</link>
+        <guid isPermaLink="false">https://lobste.rs/s/xplhwq</guid>
+        <author>argentum47@users.lobste.rs (argentum47)</author>
+        <pubDate>Fri, 20 Sep 2019 00:34:42 -0500</pubDate>
+        <comments>https://lobste.rs/s/xplhwq/lua_package_manager</comments>
+        <description>
+          &#60;p&#62;I was using luarocks, in my lua project, but the problem was luarocks isn&#8217;t like npm, where you install dependencies via &#60;code&#62;dependencies&#60;/code&#62;. Also &#60;code&#62;luarocks install&#60;/code&#62; command doesn&#8217;t support &#60;code&#62;sermver&#60;/code&#62; operators like &#60;code&#62;&#38;gt;&#60;/code&#62; , &#60;code&#62;&#38;gt;=&#60;/code&#62; etc.&#60;/p&#62;&#10;&#60;p&#62;So based on luarocks, I am working on a npm like packager, which basically installs packages using luarocks. This is very nascent, pre-alpha at best.&#60;/p&#62;&#10;&#60;p&#62;More functionalities:&#60;/p&#62;&#10;&#60;ul&#62;&#10;&#60;li&#62;especially semver character support needs to be added.&#60;/li&#62;&#10;&#60;li&#62;adding support for using any kind of existing installer like &#60;code&#62;luadist&#60;/code&#62; and not only limit it to &#60;code&#62;luarocks&#60;/code&#62;.&#60;/li&#62;&#10;&#60;/ul&#62;&#10;&#60;p&#62;I would like to hear some feedback, from you guys. Thanks :)&#60;/p&#62;&#10;
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/xplhwq/lua_package_manager&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>lua</category>
+      </item>
+      <item>
+        <title>What&#39;s Wrong with the Tech Interview Process?</title>
+        <link>https://remotesynthesis.com/blog/whats-wrong-with-tech-interviews</link>
+        <guid isPermaLink="false">https://lobste.rs/s/hvey8q</guid>
+        <author>remotesynth@users.lobste.rs (remotesynth)</author>
+        <pubDate>Fri, 20 Sep 2019 13:17:36 -0500</pubDate>
+        <comments>https://lobste.rs/s/hvey8q/what_s_wrong_with_tech_interview_process</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/hvey8q/what_s_wrong_with_tech_interview_process&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>culture</category>
+      </item>
+      <item>
+        <title>Moore&#8217;s Law is Not Dead</title>
+        <link>https://www.youtube.com/watch?v=oIG9ztQw2Gc</link>
+        <guid isPermaLink="false">https://lobste.rs/s/5fpabb</guid>
+        <author>agent281@users.lobste.rs (agent281)</author>
+        <pubDate>Fri, 20 Sep 2019 09:56:15 -0500</pubDate>
+        <comments>https://lobste.rs/s/5fpabb/moore_s_law_is_not_dead</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/5fpabb/moore_s_law_is_not_dead&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>video</category>
+          <category>hardware</category>
+      </item>
+      <item>
+        <title>The bizarre world of recruiting</title>
+        <link>http://mouri.no/blog/post/the-bizarre-world-of-recruiting/</link>
+        <guid isPermaLink="false">https://lobste.rs/s/vrdqpa</guid>
+        <author>tuxie_@users.lobste.rs (tuxie_)</author>
+        <pubDate>Thu, 19 Sep 2019 11:58:54 -0500</pubDate>
+        <comments>https://lobste.rs/s/vrdqpa/bizarre_world_recruiting</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/vrdqpa/bizarre_world_recruiting&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>practices</category>
+      </item>
+      <item>
+        <title>CATG: Concolic Test Generation Tool for Java</title>
+        <link>https://github.com/ksen007/janala2</link>
+        <guid isPermaLink="false">https://lobste.rs/s/ws54re</guid>
+        <author>nickpsecurity@users.lobste.rs (nickpsecurity)</author>
+        <pubDate>Fri, 20 Sep 2019 08:18:37 -0500</pubDate>
+        <comments>https://lobste.rs/s/ws54re/catg_concolic_test_generation_tool_for</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/ws54re/catg_concolic_test_generation_tool_for&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>java</category>
+          <category>testing</category>
+          <category>formalmethods</category>
+      </item>
+      <item>
+        <title>Star Polygons</title>
+        <link>http://datagenetics.com/blog/september42019/index.html</link>
+        <guid isPermaLink="false">https://lobste.rs/s/bahxcv</guid>
+        <author>friendlysock@users.lobste.rs (friendlysock)</author>
+        <pubDate>Fri, 20 Sep 2019 14:55:29 -0500</pubDate>
+        <comments>https://lobste.rs/s/bahxcv/star_polygons</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/bahxcv/star_polygons&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>math</category>
+          <category>visualization</category>
+          <category>graphics</category>
+      </item>
+      <item>
+        <title>pure bash bible: A collection of pure bash alternatives to external processes</title>
+        <link>https://github.com/dylanaraps/pure-bash-bible</link>
+        <guid isPermaLink="false">https://lobste.rs/s/diau3t</guid>
+        <author>carlesfe@users.lobste.rs (carlesfe)</author>
+        <pubDate>Thu, 19 Sep 2019 07:56:07 -0500</pubDate>
+        <comments>https://lobste.rs/s/diau3t/pure_bash_bible_collection_pure_bash</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/diau3t/pure_bash_bible_collection_pure_bash&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>programming</category>
+      </item>
+      <item>
+        <title>Of bitpacking, with or without SSE3</title>
+        <link>https://fulmicoton.com/posts/bitpacking/</link>
+        <guid isPermaLink="false">https://lobste.rs/s/m4qvlv</guid>
+        <author>calvin@users.lobste.rs (calvin)</author>
+        <pubDate>Fri, 20 Sep 2019 17:18:28 -0500</pubDate>
+        <comments>https://lobste.rs/s/m4qvlv/bitpacking_with_without_sse3</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/m4qvlv/bitpacking_with_without_sse3&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>programming</category>
+          <category>rust</category>
+      </item>
+      <item>
+        <title>Node.js now available in Haiku</title>
+        <link>https://www.haiku-os.org/blog/return0e/2019-09-19_nodejs_now_available_in_haiku/</link>
+        <guid isPermaLink="false">https://lobste.rs/s/8zd15z</guid>
+        <author>calvin@users.lobste.rs (calvin)</author>
+        <pubDate>Thu, 19 Sep 2019 16:02:50 -0500</pubDate>
+        <comments>https://lobste.rs/s/8zd15z/node_js_now_available_haiku</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/8zd15z/node_js_now_available_haiku&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>nodejs</category>
+      </item>
+      <item>
+        <title>Building A Piano with Flutter</title>
+        <link>https://rodydavisjr.com/2019/03/12/making-a-piano/</link>
+        <guid isPermaLink="false">https://lobste.rs/s/tcrx5h</guid>
+        <author>adsouza@users.lobste.rs (adsouza)</author>
+        <pubDate>Fri, 20 Sep 2019 12:35:03 -0500</pubDate>
+        <comments>https://lobste.rs/s/tcrx5h/building_piano_with_flutter</comments>
+        <description>
+          
+            &#60;p&#62;&#60;a href=&#34;https://lobste.rs/s/tcrx5h/building_piano_with_flutter&#34;&#62;Comments&#60;/a&#62;&#60;/p&#62;
+        </description>
+          <category>mobile</category>
+      </item>
+  </channel>
+</rss>
