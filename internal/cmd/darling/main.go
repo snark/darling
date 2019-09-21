@@ -1,8 +1,7 @@
-package main
+package darling
 
 import (
 	"errors"
-	"flag"
 	"fmt"
 	"github.com/gorilla/feeds"
 	"github.com/mmcdole/gofeed"
@@ -10,30 +9,11 @@ import (
 	"log"
 	"net/url"
 	"sort"
-	"strings"
 	"sync"
 	"time"
 )
 
-type arrayFlags []string
-
-func (i *arrayFlags) String() string {
-	return strings.Join(*i, ",")
-}
-
-func (i *arrayFlags) Set(value string) error {
-	*i = append(*i, value)
-	return nil
-}
-
-func main() {
-	var blacklistWords arrayFlags
-	var whitelistWords arrayFlags
-	flag.Var(&blacklistWords, "b", "blacklist term")
-	flag.Var(&whitelistWords, "w", "whitelist term")
-	flag.Parse()
-	tail := flag.Args()
-
+func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []string) {
 	var wg sync.WaitGroup
 
 	blacklistFilter := filter.NewRegexpFilter(blacklistWords)
@@ -49,7 +29,7 @@ func main() {
 		Author: &feeds.Author{Name: "You"},
 	}
 	outfeed.Items = []*feeds.Item{}
-	for _, url := range tail {
+	for _, url := range feedUrls {
 		// TODO: Warning messages on bad URLs
 		if validateUrl(url) {
 			wg.Add(1)
