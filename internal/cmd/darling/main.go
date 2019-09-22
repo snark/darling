@@ -64,7 +64,7 @@ func parseFeedWithFilters(url string, blacklistFilter filter.ItemFilter, whiteli
 	parsed, err := fp.ParseURL(url)
 	items := []*feeds.Item{}
 	if err != nil {
-		fmt.Println("unable to parse %s--skipping with error %s", url, err)
+		fmt.Printf("unable to parse %s--skipping with error %s", url, err)
 	} else {
 		items = process.ProcessItems(parsed.Items, []filter.ItemFilter{blacklistFilter}, []filter.ItemFilter{whitelistFilter})
 	}
