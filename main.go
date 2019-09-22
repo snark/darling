@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	_ "fmt"
+	"fmt"
 	"github.com/snark/darling/internal/cmd/darling"
 	"strings"
 )
@@ -23,9 +23,16 @@ func main() {
 	var whitelistWords arrayFlags
 	flag.Var(&blacklistWords, "b", "blacklist term")
 	flag.Var(&whitelistWords, "w", "whitelist term")
+	flag.Usage = func() {
+		fmt.Printf("Usage: darling [options] <feed_url>...\n")
+		flag.PrintDefaults()
+	}
 	flag.Parse()
 	tail := flag.Args()
 
-	darling.FilterFeeds(blacklistWords, whitelistWords, tail)
-
+	if len(tail) > 0 {
+		darling.FilterFeeds(blacklistWords, whitelistWords, tail)
+	} else {
+		flag.Usage()
+	}
 }
