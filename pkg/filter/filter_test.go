@@ -65,6 +65,33 @@ func TestRegexpFilterBasic(t *testing.T) {
 	}
 }
 
+func TestRegexpFilterTitle(t *testing.T) {
+	feed := parsedFeedFromFile("../../testdata/waxy.org.rss")
+	wcFilter := filter.NewRegexpFilter([]string{"gerry"})
+	ans := wcFilter.Match(*feed.Items[0])
+	if ans != true {
+		t.Errorf("got false from title match")
+	}
+}
+
+func TestRegexpFilterDescription(t *testing.T) {
+	feed := parsedFeedFromFile("../../testdata/waxy.org.rss")
+	wcFilter := filter.NewRegexpFilter([]string{"delightfully"})
+	ans := wcFilter.Match(*feed.Items[13])
+	if ans != true {
+		t.Errorf("got false from description match")
+	}
+}
+
+func TestRegexpFilterContent(t *testing.T) {
+	feed := parsedFeedFromFile("../../testdata/waxy.org.rss")
+	wcFilter := filter.NewRegexpFilter([]string{"amazing creators"})
+	ans := wcFilter.Match(*feed.Items[13])
+	if ans != true {
+		t.Errorf("got false from content match")
+	}
+}
+
 func TestRegexpFilterMultiWord(t *testing.T) {
 	wcFilter := filter.NewRegexpFilter([]string{
 		"this weekend",

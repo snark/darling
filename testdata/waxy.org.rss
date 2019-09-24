@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Waxy.org</title>
+	<atom:link href="https://waxy.org/feed/" rel="self" type="application/rss+xml" />
+	<link>https://waxy.org</link>
+	<description>Andy Baio lives here</description>
+	<lastBuildDate>
+	Thu, 01 Aug 2019 21:24:19 +0000	</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.1.2</generator>
+
+<image>
+	<url>https://waxy.org/wp-content/uploads/2016/10/square_logo-150x150.png</url>
+	<title>Waxy.org</title>
+	<link>https://waxy.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Ugly Gerry</title>
+		<link>https://uglygerry.com/</link>
+				<pubDate>Thu, 01 Aug 2019 21:24:18 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18602</guid>
+				<description><![CDATA[<!-- wp:html -->
+typeface made from gerrymandered districts
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+typeface made from gerrymandered districts
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Chris Wetherell reflects on building the Retweet for Twitter</title>
+		<link>https://www.buzzfeednews.com/article/alexkantrowitz/how-the-retweet-ruined-the-internet</link>
+				<pubDate>Wed, 24 Jul 2019 02:44:37 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18596</guid>
+				<description><![CDATA[<!-- wp:html -->
+Chris previously started and ran Google Reader, a product sorely missed by everyone who used it
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+Chris previously started and ran Google Reader, a product sorely missed by everyone who used it
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Robin Sloan on the scale and feedback of social media platforms</title>
+		<link>https://platforms.fyi/</link>
+				<pubDate>Thu, 18 Jul 2019 22:36:19 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18591</guid>
+				<description><![CDATA[<!-- wp:html -->
+interesting twigbunch on Rosegarden
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+interesting twigbunch on Rosegarden
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Run Your Own Social</title>
+		<link>https://runyourown.social/</link>
+				<pubDate>Mon, 08 Jul 2019 18:51:12 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18588</guid>
+				<description><![CDATA[<!-- wp:html -->
+Darius Kazemi's guide to running a small social network for your friends; emphasis on "<a href="https://runyourown.social/#keep-it-small">small</a>"
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+Darius Kazemi&#8217;s guide to running a small social network for your friends; emphasis on &#8220;<a href="https://runyourown.social/#keep-it-small">small</a>&#8221;
+]]></content:encoded>
+										</item>
+		<item>
+		<title>User Inyerface</title>
+		<link>https://userinyerface.com/</link>
+				<pubDate>Wed, 03 Jul 2019 20:33:43 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18583</guid>
+				<description><![CDATA[<!-- wp:html -->
+frustrating and funny interactive dark patterns
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+frustrating and funny interactive dark patterns
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Profile of 8chan creator, Frederick Brennan</title>
+		<link>https://members.tortoisemedia.com/2019/06/29/8chan/content.html</link>
+				<pubDate>Wed, 03 Jul 2019 16:32:22 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18581</guid>
+				<description><![CDATA[<!-- wp:html -->
+he should have let it die instead of selling it to <a href="https://splinternews.com/meet-the-man-keeping-8chan-the-worlds-most-vile-websit-1793856249">this asshole</a>
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+he should have let it die instead of selling it to <a href="https://splinternews.com/meet-the-man-keeping-8chan-the-worlds-most-vile-websit-1793856249">this asshole</a>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Mike Davidson on Superhuman&#8217;s creepy email tracking</title>
+		<link>https://mikeindustries.com/blog/archive/2019/06/superhuman-is-spying-on-you</link>
+				<pubDate>Tue, 02 Jul 2019 20:03:26 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18577</guid>
+				<description><![CDATA[<!-- wp:html -->
+and more generally, about ethics in technology
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+and more generally, about ethics in technology
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Using machine learning to find public domain Krazy Kat comics</title>
+		<link>https://joel.franusic.com/krazy_kat/about/</link>
+				<pubDate>Mon, 01 Jul 2019 19:43:39 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18574</guid>
+				<description><![CDATA[<!-- wp:html -->
+novel use of AI to search newspaper archives with <a href="https://joel.franusic.com/krazy_kat/">solid results</a>
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+novel use of AI to search newspaper archives with <a href="https://joel.franusic.com/krazy_kat/">solid results</a>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>How The Shawshank Redemption Humanizes Prisoners</title>
+		<link>https://www.youtube.com/watch?v=rhGJ5SmSE2o</link>
+				<pubDate>Mon, 01 Jul 2019 19:34:43 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18572</guid>
+				<description><![CDATA[<!-- wp:html -->
+stunning video essay from <a href="https://www.youtube.com/user/rebelliouspixels/videos">Pop Culture Detective</a>'s Jonathan McIntosh on America's shifting perceptions of the prison-industrial complex
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+stunning video essay from <a href="https://www.youtube.com/user/rebelliouspixels/videos">Pop Culture Detective</a>&#8216;s Jonathan McIntosh on America&#8217;s shifting perceptions of the prison-industrial complex
+]]></content:encoded>
+										</item>
+		<item>
+		<title>The Guardian&#8217;s Silicon Valley dictionary</title>
+		<link>https://www.theguardian.com/us-news/2019/jun/26/how-to-speak-silicon-valley-decoding-tech-bros-from-microdosing-to-privacy</link>
+				<pubDate>Mon, 01 Jul 2019 18:22:08 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18569</guid>
+				<description><![CDATA[<!-- wp:html -->
+sharply-written modern descendant of <a href="http://www.eod.com/devil/archive/">Devil's Dictionary 2.0</a>
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+sharply-written modern descendant of <a href="http://www.eod.com/devil/archive/">Devil&#8217;s Dictionary 2.0</a>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>The New Yorker goes on the road with Mitski</title>
+		<link>https://www.newyorker.com/magazine/2019/07/08/on-the-road-with-mitski</link>
+				<pubDate>Mon, 01 Jul 2019 18:05:37 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18563</guid>
+				<description><![CDATA[<!-- wp:html -->
+great profile of a spectacular artist
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+great profile of a spectacular artist
+]]></content:encoded>
+										</item>
+		<item>
+		<title>First Look Media ends funding for The Nib, shuts down Topic</title>
+		<link>https://variety.com/2019/digital/news/topic-magazine-shuts-down-the-nib-first-look-media-1203256383/</link>
+				<pubDate>Mon, 01 Jul 2019 17:56:08 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18561</guid>
+				<description><![CDATA[<!-- wp:html -->
+The Nib is <a href="https://medium.com/@MattBors/the-future-of-the-nib-again-d4784efb1125">going independent</a>, and you can <a href="https://membership.thenib.com/">support it here</a>
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+The Nib is <a href="https://medium.com/@MattBors/the-future-of-the-nib-again-d4784efb1125">going independent</a>, and you can <a href="https://membership.thenib.com/">support it here</a>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Flappy Royale</title>
+		<link>https://flappyroyale.io/</link>
+				<pubDate>Mon, 01 Jul 2019 17:51:57 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18558</guid>
+				<description><![CDATA[<!-- wp:html -->
+compete against 99 other birds; <a href="https://github.com/flappy-royale/flappy-royale">open-source</a>, and free for <a href="https://flappyroyale.io/demo/">web</a>, iOS, and Android
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+compete against 99 other birds; <a href="https://github.com/flappy-royale/flappy-royale">open-source</a>, and free for <a href="https://flappyroyale.io/demo/">web</a>, iOS, and Android
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Panic Announces Playdate</title>
+		<link>https://waxy.org/2019/05/panic-announces-playdate/</link>
+				<pubDate>Wed, 22 May 2019 23:18:09 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18548</guid>
+				<description><![CDATA[Working in secret for four years, @panic just announced @playdate, a delightfully retro-modern handheld console.]]></description>
+								<content:encoded><![CDATA[
+<p>Today, Panic announced <a href="https://play.date/">Playdate</a>, their lovingly retro-modern handheld gaming system with a lineup of custom-made indie games from some of my favorite game designers in the world.</p>
+
+
+
+<p>I&#8217;m fortunate enough to know the Panic folks, some of the kindest and most creative people I&#8217;ve ever met, and I&#8217;ve followed this project over the last few years—almost since its inception.</p>
+
+
+
+<p>Designed and engineered in partnership with <a href="https://teenage.engineering/">Teenage Engineering</a>, Playdate features a unique crank in addition to standard directional arrow and button controls, which enables new kinds of experimental gameplay.</p>
+
+
+
+<figure class="wp-block-embed-twitter wp-block-embed is-type-rich is-provider-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="550" data-dnt="true"><p lang="en" dir="ltr">Introducing Playdate, a new handheld gaming system from Panic. <br><br>It fits in your pocket. It&#39;s got a black and white screen. It includes a season of brand-new games from amazing creators. Oh and… there&#39;s a crank???? <a href="https://t.co/WiIPUkpjSq">https://t.co/WiIPUkpjSq</a><br><br>Yes. A thread… <a href="https://t.co/47BwSOtiiP">pic.twitter.com/47BwSOtiiP</a></p>&mdash; Playdate (@playdate) <a href="https://twitter.com/playdate/status/1131307504116174848?ref_src=twsrc%5Etfw">May 22, 2019</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></figure>
+
+
+
+<p>Best of all, the game lineup is a complete surprise and comes with the purchase of every Playdate: a dozen secret games released weekly in the first &#8220;season,&#8221; automatically downloaded to the device every Monday, from a team of all-star indie designers including Keita Takahashi, Bennett Foddy, Zach Gage, and Shaun Inman.</p>
+
+
+
+<figure class="wp-block-embed-twitter wp-block-embed is-type-rich is-provider-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="550" data-dnt="true"><p lang="en" dir="ltr">About those games. We reached out to some of our favorite people, like <a href="https://twitter.com/KeitaTakahash?ref_src=twsrc%5Etfw">@KeitaTakahash</a>, <a href="https://twitter.com/bfod?ref_src=twsrc%5Etfw">@bfod</a>, <a href="https://twitter.com/helvetica?ref_src=twsrc%5Etfw">@helvetica</a>, <a href="https://twitter.com/shauninman?ref_src=twsrc%5Etfw">@shauninman</a>, and many more.<br><br>Here&#39;s a peek at one: Crankin&#39;s Time Travel Adventure, from Keita. It&#39;s fun and funny. <a href="https://t.co/0Ibwqr5k3I">pic.twitter.com/0Ibwqr5k3I</a></p>&mdash; Playdate (@playdate) <a href="https://twitter.com/playdate/status/1131307589587701760?ref_src=twsrc%5Etfw">May 22, 2019</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></figure>
+
+
+
+<p>It&#8217;s very special, and I&#8217;m so excited to see it finally announced after years of secret development. I can&#8217;t wait to buy one.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>How Lil Nas X used the meme ecosystem to make a #1 hit</title>
+		<link>https://www.nytimes.com/2019/05/10/arts/music/old-town-road-lil-nas-x.html</link>
+				<pubDate>Fri, 10 May 2019 15:52:46 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18543</guid>
+				<description><![CDATA[<!-- wp:html -->
+even <a href="https://www.nytimes.com/2019/05/07/arts/music/taylor-swift-lil-nas-x-billboard-chart.html">Taylor Swift can't top Old Town Road</a> on the charts
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+even <a href="https://www.nytimes.com/2019/05/07/arts/music/taylor-swift-lil-nas-x-billboard-chart.html">Taylor Swift can&#8217;t top Old Town Road</a> on the charts
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Kickstarter turns 10</title>
+		<link>https://www.kickstarter.com/10</link>
+				<pubDate>Tue, 30 Apr 2019 15:44:28 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18539</guid>
+				<description><![CDATA[<!-- wp:html -->
+with a retrospective and a bunch of easter eggs across the site
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+with a retrospective and a bunch of easter eggs across the site
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Neuhaus</title>
+		<link>https://neuhaus.world/</link>
+				<pubDate>Tue, 23 Apr 2019 15:43:31 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18533</guid>
+				<description><![CDATA[<!-- wp:html -->
+participatory music video where visitors upload images that make up the world
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+participatory music video where visitors upload images that make up the world
+]]></content:encoded>
+										</item>
+		<item>
+		<title>GB Studio</title>
+		<link>https://www.gbstudio.dev/</link>
+				<pubDate>Tue, 23 Apr 2019 15:42:18 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18531</guid>
+				<description><![CDATA[<!-- wp:html -->
+a free visual game builder for making Game Boy games
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+a free visual game builder for making Game Boy games
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Source code released for 45 Infocom games</title>
+		<link>https://github.com/historicalsource?tab=repositories</link>
+				<pubDate>Tue, 16 Apr 2019 18:08:56 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18527</guid>
+				<description><![CDATA[<!-- wp:html -->
+critical gaming history including <a href="https://github.com/historicalsource/abyss/">unreleased</a> and <a href="https://github.com/historicalsource/checkpoint">unfinished</a> prototypes; <a href="https://twitter.com/textfiles/status/1118005126457888768">more context</a> from Jason Scott
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+critical gaming history including <a href="https://github.com/historicalsource/abyss/">unreleased</a> and <a href="https://github.com/historicalsource/checkpoint">unfinished</a> prototypes; <a href="https://twitter.com/textfiles/status/1118005126457888768">more context</a> from Jason Scott
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Beto O&#8217;Rourke was in Cult of the Dead Cow</title>
+		<link>https://www.reuters.com/investigates/special-report/usa-politics-beto-orourke/</link>
+				<pubDate>Fri, 15 Mar 2019 17:14:38 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18523</guid>
+				<description><![CDATA[<!-- wp:html -->
+writing <a href="http://textfiles.com/groups/CDC/cDc-0031.txt">gems like this</a> under the handle "Psychedelic Warlord"
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+writing <a href="http://textfiles.com/groups/CDC/cDc-0031.txt">gems like this</a> under the handle &#8220;Psychedelic Warlord&#8221;
+]]></content:encoded>
+										</item>
+		<item>
+		<title>The Christchurch attack was made to go viral</title>
+		<link>https://www.nytimes.com/2019/03/15/opinion/new-zealand-shooting.html</link>
+				<pubDate>Fri, 15 Mar 2019 17:04:13 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18521</guid>
+				<description><![CDATA[<!-- wp:html -->
+Charlie Warzel writing for the NYT
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+Charlie Warzel writing for the NYT
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Spotify files antitrust complaint against Apple</title>
+		<link>https://www.theverge.com/2019/3/13/18263453/spotify-apple-app-store-antitrust-complaint-ec-30-percent-cut-unfair</link>
+				<pubDate>Thu, 14 Mar 2019 05:38:17 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18516</guid>
+				<description><![CDATA[<!-- wp:html -->
+they make a <a href="https://timetoplayfair.com/timeline/">strong case</a>
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+they make a <a href="https://timetoplayfair.com/timeline/">strong case</a>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Baba Is You</title>
+		<link>http://www.hempuli.com/baba/</link>
+				<pubDate>Thu, 14 Mar 2019 05:31:11 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18513</guid>
+				<description><![CDATA[<!-- wp:html -->
+the IGF-winning puzzle game is out today for PC/Mac/Switch, and it's stunning
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+the IGF-winning puzzle game is out today for PC/Mac/Switch, and it&#8217;s stunning
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Chart Party&#8217;s search for the saddest punt</title>
+		<link>https://www.youtube.com/watch?v=F9H9LwGmc-0</link>
+				<pubDate>Wed, 20 Feb 2019 06:29:18 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18506</guid>
+				<description><![CDATA[<!-- wp:html -->
+somehow, against all odds, Jon Bois finds a way to make me interested in football
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+somehow, against all odds, Jon Bois finds a way to make me interested in football
+]]></content:encoded>
+										</item>
+		<item>
+		<title>This Person Does Not Exist</title>
+		<link>https://thispersondoesnotexist.com/</link>
+				<pubDate>Wed, 20 Feb 2019 06:24:48 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18503</guid>
+				<description><![CDATA[<!-- wp:html -->
+reload for a new GAN-generated face; see also: <a href="http://www.thisairbnbdoesnotexist.com/">This AirBNB Does Not Exist</a>
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+reload for a new GAN-generated face; see also: <a href="http://www.thisairbnbdoesnotexist.com/">This AirBNB Does Not Exist</a>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Endless Jeopardy</title>
+		<link>https://twitter.com/EndlessJeopardy</link>
+				<pubDate>Tue, 19 Feb 2019 07:11:06 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18498</guid>
+				<description><![CDATA[<!-- wp:html -->
+a new Twitter bot/game from Neil Cicierega
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+a new Twitter bot/game from Neil Cicierega
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Netflix launches new podcast with Another Round&#8217;s Tracy Clayton</title>
+		<link>https://twitter.com/strongblacklead/status/1094974416499269632</link>
+				<pubDate>Mon, 11 Feb 2019 18:42:03 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18495</guid>
+				<description><![CDATA[<!-- wp:html -->
+Strong Black Legends is an <a href="https://itunes.apple.com/us/podcast/strong-black-legends/id1451219002?mt=2">instant subscribe</a>
+<!-- /wp:html -->]]></description>
+								<content:encoded><![CDATA[
+Strong Black Legends is an <a href="https://itunes.apple.com/us/podcast/strong-black-legends/id1451219002?mt=2">instant subscribe</a>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Reflecting on My Failure to Build a Billion-Dollar Company</title>
+		<link>https://medium.com/@shl/reflecting-on-my-failure-to-build-a-billion-dollar-company-b0c31d7db0e7</link>
+				<pubDate>Thu, 07 Feb 2019 21:36:53 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18485</guid>
+				<description><![CDATA[remarkably unusual story of how Gumroad's founder turned a VC-funded startup into a "lifestyle" business]]></description>
+								<content:encoded><![CDATA[<p>remarkably unusual story of how Gumroad&#8217;s founder turned a VC-funded startup into a &#8220;lifestyle&#8221; business</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Dad</title>
+		<link>https://waxy.org/2019/02/dad/</link>
+				<comments>https://waxy.org/2019/02/dad/#comments</comments>
+				<pubDate>Wed, 06 Feb 2019 03:58:45 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Personal]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18462</guid>
+				<description><![CDATA[Remembering the life of my dad, Stephen Baio.]]></description>
+								<content:encoded><![CDATA[<p>My father passed away on January 24, less than two weeks ago, while my family was still reeling from the news that he had developed Stage IV lymphoma.</p>
+<p>I&#8217;ve never talked about my dad here before, mostly because I don&#8217;t write often about my personal life, but I&#8217;ve made exceptions in the past to commemorate and honor the deaths of people who meant a lot to me.</p>
+<p>On Saturday, we gathered together at the Catholic church in Burbank where my parents were married and my grandfather&#8217;s funeral was held, and we said goodbye to my dad, Stephen Baio.</p>
+<p>At the service, I read the eulogy below, which tried to explain why he was special to so many of us. Writing it was easy, at least in part because he wrote the best bits himself. The hard part was reading it.</p>
+<hr />
+<p>There are three words I keep hearing over and over again since my dad passed away, when I’m talking to people who knew him — some I know well, some who haven’t seen me since I was a little kid, and some of you that I’d never met before.</p>
+<p>Those three words are, “Everyone loved Steve.”</p>
+<p>It’s true, everyone loved Steve. To know my dad was to love him.</p>
+<p>Stephen Baio was impossible not to like. He lit up a room with a joyful and contagious enthusiasm — sweet and sincere, and genuinely funny. He was unabashedly silly. He laughed at his own jokes and at yours. He made it very easy to love him.</p>
+<p>He was generous to everyone he met, whether it was someone he knew for 30 minutes or 30 years. To me, it always felt like he had a hard time saving money because of how much he loved spending it on others.</p>
+<p>My dad made people happy, and as long as you’re making yourself and other people happy and you’re not hurting anybody, who cares what anybody else thinks? You’re probably doing the right thing.</p>
+<p>My dad taught me the importance of being yourself. Being true to who you are. He taught me the values of loyalty, friendship, and kindness.</p>
+<p>And these weren’t lessons that could be spoken: he taught me by how he lived his life, it was central to how he walked through the world, and how over time, you change it by who you touch along the way, in ways big and small.</p>
+<hr />
+<p>After he passed away, I went into his bedroom to find some photos for this memorial service.</p>
+<p>And in one big box, I found photos from his entire life. Photos from his childhood with his mother, Teresa, and with his brother, Anthony, and his late sister, Nicolina, my Aunt Nicki.</p>
+<p>I found photos with old friends in the ‘70s, camping in the mountains and just goofing around. Photos from his prom, from parties, from his wedding and with my mom. So many from my childhood, going to Disneyland and the beach, dressing up for Halloweens, Christmases, and Easters long ago. Photos from the tours he went on, traveling with bands or shooting photos of monuments in Tokyo. And later, photos from my own wedding, photos with his grandson.</p>
+<p>But after that, I found three more big boxes of the same size, and I was surprised to see them stuffed full of every greeting card, postcard, letter, and memento he ever received. Clippings from newspapers, birth announcements and obituaries, matchbook covers and cassette recordings of long-forgotten conversations. Piles of memories spanning decades, immaculately organized into dozens of manila envelopes, filled to bursting.</p>
+<p><img class="aligncenter size-full wp-image-18465" src="https://waxy.org/wp-content/uploads/2019/02/dad_1978.jpg" alt="" width="1800" height="1085" srcset="https://waxy.org/wp-content/uploads/2019/02/dad_1978.jpg 1800w, https://waxy.org/wp-content/uploads/2019/02/dad_1978-300x181.jpg 300w, https://waxy.org/wp-content/uploads/2019/02/dad_1978-768x463.jpg 768w, https://waxy.org/wp-content/uploads/2019/02/dad_1978-1024x617.jpg 1024w, https://waxy.org/wp-content/uploads/2019/02/dad_1978-800x482.jpg 800w" sizes="(max-width: 1800px) 100vw, 1800px" /></p>
+<p>It was such a clear reminder how much every one of your friendships and relationships meant to him.</p>
+<p>Everyone loved Steve, and you should know without any question or doubt, that he loved you all back.</p>
+<hr />
+<p>Seven years ago, my Dad wrote a long handwritten letter, one of thousands he’d written in his life. But this one was special, it was only meant to be read in the event of his passing.</p>
+<p>I read it for the first time the day after he died, and I’d like to read from it now.</p>
+<blockquote><p>To Whom It May Concern,</p>
+<p>I guess this would be considered my last Will and Testament.</p>
+<p>Anyways, whatever it is, these are my wishes, for things to be done whenever I’m gone.</p>
+<p>I’m hoping there’s not a lot of things to ask for, I don’t want to be too much of a pain in the ass.</p>
+<p>So here goes, I’m writing these things down as I’m writing and thinking.</p></blockquote>
+<p>He goes on to talk about how he wanted his personal belongings distributed or donated. He talks about how he wanted to be cremated, and how he wanted his ashes scattered in the High Sierras, up by Olancha, Mammoth, and June Lakes, places that he loved so much.</p>
+<p>He said that he didn’t want an expensive funeral, just a memorial with all of his friends and family through the years — all of you — to come together and have what he called “a nice party.”</p>
+<p>He wrote, “I want all the people who meant a lot to me to be there. I’m sure you’ll have a good time.”</p>
+<p>I’m going to give my dad the last word, by reading from the end of his will, a message that he addressed directly to all of you — the people who meant so much to him in his life. Here’s what he wrote:</p>
+<blockquote><p>Well, I think that’s about it for now. If I think of anything else, I’ll let you know. (Ha Ha.)</p>
+<p>I’ll sure miss you a lot, more than you’ll ever know.</p>
+<p>Maybe I’ll see you where ever God decides to send me. I hope there’ll be fishing and pretty girls, good music, my Mom’s Italian spaghetti, and beer.</p>
+<p>Thank you all for everything, your love, your friendship, good fun, good laughs and memories, and for the pleasure just to know each and every one of you.</p>
+<p>With all my love, now and forever.</p>
+<p>Bye for now,</p>
+<p>Me<br />
+Stephen</p></blockquote>
+<p>Thank you.</p>
+<p><img class="aligncenter size-full wp-image-18467" src="https://waxy.org/wp-content/uploads/2019/02/Dad-Portrait-2-December-11-2005.jpg" alt="" width="3456" height="2304" srcset="https://waxy.org/wp-content/uploads/2019/02/Dad-Portrait-2-December-11-2005.jpg 3456w, https://waxy.org/wp-content/uploads/2019/02/Dad-Portrait-2-December-11-2005-300x200.jpg 300w, https://waxy.org/wp-content/uploads/2019/02/Dad-Portrait-2-December-11-2005-768x512.jpg 768w, https://waxy.org/wp-content/uploads/2019/02/Dad-Portrait-2-December-11-2005-1024x683.jpg 1024w, https://waxy.org/wp-content/uploads/2019/02/Dad-Portrait-2-December-11-2005-800x533.jpg 800w" sizes="(max-width: 3456px) 100vw, 3456px" /></p>
+]]></content:encoded>
+							<wfw:commentRss>https://waxy.org/2019/02/dad/feed/</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+							</item>
+		<item>
+		<title>Holly Wood&#8217;s mega-thread of anonymous dirty secrets in various professions</title>
+		<link>https://twitter.com/girlziplocked/status/1085567688334868481</link>
+				<pubDate>Sat, 19 Jan 2019 01:41:32 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18459</guid>
+				<description><![CDATA[fascinating to see people spilling dirt about their respective industries]]></description>
+								<content:encoded><![CDATA[<p>fascinating to see people spilling dirt about their respective industries</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Simone Giertz&#8217; brain tumor is back</title>
+		<link>https://www.youtube.com/watch?v=7x5XRQ07sjU</link>
+				<pubDate>Fri, 18 Jan 2019 22:22:04 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18457</guid>
+				<description><![CDATA[Burn Brian 2019]]></description>
+								<content:encoded><![CDATA[<p>Burn Brian 2019</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Guess the most expensive domain name</title>
+		<link>https://domain-pricing.glitch.me/</link>
+				<pubDate>Fri, 18 Jan 2019 22:06:50 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18455</guid>
+				<description><![CDATA[I'm disturbingly good at this]]></description>
+								<content:encoded><![CDATA[<p>I&#8217;m disturbingly good at this</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Bird Scooters threatens Boing Boing over Cory Doctorow post</title>
+		<link>https://boingboing.net/2019/01/11/flipping-the-bird.html</link>
+				<pubDate>Fri, 11 Jan 2019 23:11:18 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18451</guid>
+				<description><![CDATA[laughable legal claim, with a great response from the EFF]]></description>
+								<content:encoded><![CDATA[<p>laughable legal claim, with a great response from the EFF</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>The oral history of the Hampsterdance</title>
+		<link>https://www.cbc.ca/arts/the-oral-history-of-the-hampsterdance-the-twisted-true-story-of-one-of-the-world-s-first-memes-1.4958325</link>
+				<pubDate>Fri, 11 Jan 2019 22:47:38 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18448</guid>
+				<description><![CDATA[a wild story of copyright, remix, and early web culture]]></description>
+								<content:encoded><![CDATA[<p>a wild story of copyright, remix, and early web culture</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>In A Nutshell</title>
+		<link>https://vimeo.com/307578337</link>
+				<pubDate>Fri, 11 Jan 2019 22:27:20 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18446</guid>
+				<description><![CDATA[stunning stop-motion reminiscent of <a href="https://pesfilm.com/">PES's work</a>]]></description>
+								<content:encoded><![CDATA[<p>stunning stop-motion reminiscent of <a href="https://pesfilm.com/">PES&#8217;s work</a></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Suck.com, Gone for Good (For Good)</title>
+		<link>https://waxy.org/2019/01/suck-com-gone-for-good-for-good/</link>
+				<comments>https://waxy.org/2019/01/suck-com-gone-for-good-for-good/#respond</comments>
+				<pubDate>Fri, 11 Jan 2019 21:21:46 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18431</guid>
+				<description><![CDATA[After 23 years at its original domain, seminal webzine Suck.com appears to be permanently offline.]]></description>
+								<content:encoded><![CDATA[<p>13 years ago, I wrote a post here called &#8220;<a href="https://waxy.org/2005/12/suckcom_gone_fo/">Suck.com, Gone for Good</a>&#8221; when the seminal webzine appeared to go offline in December 2005, redirected to a porn search portal.</p>
+<p>Fans quickly rallied around it, with some scrambling to put up mirrors and archives, including Suck contributor Greg Knauss and the dearly-missed Aaron Swartz. A few days later, Lycos apparently changed their mind and pointed the domain back to its original server, where it managed to stay for 13 more years.</p>
+<p>The site&#8217;s had near-death experiences in the past, including some downtime in 2015, but it&#8217;s somehow managed to stay online at its original domain for 23 years — more than 17 years after its last column on June 8, 2001.</p>
+<p>Three weeks ago, on December 16, 2018, the ownership changed hands from Lycos to a private GoDaddy account. Shortly after that, the Suck.com domain started redirecting to <a href="https://531816225775228253.weebly.com/">this Weebly account</a> with an &#8220;under construction&#8221; message.</p>
+<p><a href="https://web.archive.org/web/20181221021724/https://531816225775228253.weebly.com/"><img class="aligncenter wp-image-18432 size-full" src="https://waxy.org/wp-content/uploads/2019/01/suck_weebly.jpg" alt="" width="1200" height="712" srcset="https://waxy.org/wp-content/uploads/2019/01/suck_weebly.jpg 1200w, https://waxy.org/wp-content/uploads/2019/01/suck_weebly-300x178.jpg 300w, https://waxy.org/wp-content/uploads/2019/01/suck_weebly-768x456.jpg 768w, https://waxy.org/wp-content/uploads/2019/01/suck_weebly-1024x608.jpg 1024w, https://waxy.org/wp-content/uploads/2019/01/suck_weebly-800x475.jpg 800w" sizes="(max-width: 1200px) 100vw, 1200px" /></a></p>
+<p>Yesterday, I noticed the <a href="https://suck.com/">content changed</a>, now displaying a series of sports-related polls, and the following greeting:</p>
+<blockquote><p>Welcome to Suck.com. All sports, all the time. Let your voice be heard! You tell us, does it suck or not?</p></blockquote>
+<p>I reached out to the new owners, but no response yet.</p>
+<p>Assuming the domain was sold legitimately by Lycos, this permanently spells the end of Suck.com.</p>
+<p>For retrospectives on Suck&#8217;s role in early web history, these links do a good job:</p>
+<ul>
+<li>Josh Quittner&#8217;s 1996 <a href="https://www.wired.com/1996/11/web-dreams-2/">Wired article</a> about the site&#8217;s origins.</li>
+<li>Keep Going&#8217;s &#8220;<a href="http://www.keepgoing.org/issue20_giant/the_big_fish.html">The Big Fish</a>,&#8221; a 2005 retrospective about the impact of &#8220;the first great website&#8221;</li>
+<li>Engadget&#8217;s Nicole Lee <a href="https://www.engadget.com/2015/09/16/suck-dot-com-20th-anniversary/">interviewed the Suck crew</a> after their appearance at XOXO 2015.</li>
+<li>The <a href="http://www.internethistorypodcast.com/2016/02/founders-of-suck-com-carl-steadman-and-joey-anuff/">Internet History Podcast</a> with Suck founders Carl Steadman and Joey Anuff, and the <a href="http://www.internethistorypodcast.com/2016/05/suck-again-joey-anuff-and-carl-steadman-return/">followup episode</a>.</li>
+<li>In 2016, The Atlantic&#8217;s Anna Wiener wrote about &#8220;<a href="https://www.theatlantic.com/technology/archive/2016/03/suck-webzine/473853/">the best magazine on the early web</a>.&#8221;</li>
+<li>In 2017, <a href="https://thehistoryoftheweb.com/the-web-after-suck/">The History of the Web</a> covered &#8220;The Web After Suck&#8221; in its second post.</li>
+</ul>
+<p>If you&#8217;re feeling nostalgic, <a href="http://suckagain.com/">Suck, Again</a> is an ongoing newsletter by <a href="https://twitter.com/markofmac">Mark Macdonald</a> that emails each column to you, 20 years to the day.</p>
+<p>Sadly, every existing link to Suck&#8217;s articles and features are now broken, but of course, available in the <a href="https://web.archive.org/web/20170517011422/http://www.suck.com/">Wayback Machine</a>.</p>
+<p>If you want to keep it alive for a while longer, add the line below to your <a href="https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/">hosts file</a> and Suck.com links will still work for as long as Lycos keeps the server online.</p>
+<blockquote>
+<pre>209.202.254.90 suck.com</pre>
+</blockquote>
+<p>Or use Greg Knauss&#8217;s proxy, which is live once again at <a href="http://suck.eod.com/">suck.eod.com</a>.</p>
+<p>Thanks to Carl Steadman, Joey Anuff, Heather Havrilesky, Tim Cavanaugh, Ana Marie Cox, Terry Colon, Owen Thomas, and every other Suckster for making something special we&#8217;re still talking about all these years later.</p>
+<p><img class="aligncenter size-full wp-image-18435" src="https://waxy.org/wp-content/uploads/2019/01/gone_fishing.gif" alt="" width="400" height="247" /></p>
+]]></content:encoded>
+							<wfw:commentRss>https://waxy.org/2019/01/suck-com-gone-for-good-for-good/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>The meta-meme history of the Alexandria Ocasio-Cortez dancing video</title>
+		<link>https://www.wired.com/story/alexandria-ocasio-cortez-dancing-video/</link>
+				<pubDate>Fri, 04 Jan 2019 19:52:21 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18428</guid>
+				<description><![CDATA[from a Phoenix remix and Larry Lessig lawsuit to a failed smear of a badass Congresswoman]]></description>
+								<content:encoded><![CDATA[<p>from a Phoenix remix and Larry Lessig lawsuit to a failed smear of a badass Congresswoman</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>2019 Independent Games Festival finalists announced</title>
+		<link>http://igf.com/article/2019-independent-games-festival-reveals-years-finalists</link>
+				<pubDate>Thu, 03 Jan 2019 22:05:06 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18423</guid>
+				<description><![CDATA[as always, great selection of the best of the new and upcoming indie game scene]]></description>
+								<content:encoded><![CDATA[<p>as always, great selection of the best of the new and upcoming indie game scene</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Scratch 3.0 released</title>
+		<link>https://medium.com/scratchteam-blog/introducing-scratch-3-0-expanding-the-creative-possibilities-of-coding-ad4cd9eda9ef</link>
+				<pubDate>Thu, 03 Jan 2019 17:35:57 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18421</guid>
+				<description><![CDATA[extensions as building blocks, an offline editor, and new tutorials]]></description>
+								<content:encoded><![CDATA[<p>extensions as building blocks, an offline editor, and new tutorials</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Meditations</title>
+		<link>http://meditations.games/</link>
+				<pubDate>Wed, 02 Jan 2019 15:53:18 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18416</guid>
+				<description><![CDATA[365 small games, each only available to play for a single day]]></description>
+								<content:encoded><![CDATA[<p>365 small games, each only available to play for a single day</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>365 RFCs</title>
+		<link>https://write.as/365-rfcs/</link>
+				<pubDate>Wed, 02 Jan 2019 05:10:00 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18414</guid>
+				<description><![CDATA[Darius Kazemi's new year-long project to blog one <a href="https://www.ietf.org/standards/rfcs/">RFC</a> daily in chronological order]]></description>
+								<content:encoded><![CDATA[<p>Darius Kazemi&#8217;s new year-long project to blog one <a href="https://www.ietf.org/standards/rfcs/">RFC</a> daily in chronological order</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Happy Public Domain Day!</title>
+		<link>https://law.duke.edu/cspd/publicdomainday/2019/</link>
+				<pubDate>Wed, 02 Jan 2019 05:06:35 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18412</guid>
+				<description><![CDATA[published works from 1923 entered the public domain today, the first additions in over 20 years]]></description>
+								<content:encoded><![CDATA[<p>published works from 1923 entered the public domain today, the first additions in over 20 years</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Lauren Hough&#8217;s compelling account of a decade doing cable repair in D.C.</title>
+		<link>https://www.huffingtonpost.com/entry/cable-tech-dick-cheney-sex-dungeon_us_5c0ea571e4b06484c9fd4c21</link>
+				<pubDate>Wed, 02 Jan 2019 05:04:30 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18410</guid>
+				<description><![CDATA[sex dungeons, Russian mobsters, and Dick Cheney]]></description>
+								<content:encoded><![CDATA[<p>sex dungeons, Russian mobsters, and Dick Cheney</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Analyzing the phonetics of Grover swearing on Sesame Street</title>
+		<link>https://christiandicanio.blogspot.com/2018/12/is-grover-swearing-no-its-in-your-ears.html</link>
+				<pubDate>Sun, 30 Dec 2018 23:15:07 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18408</guid>
+				<description><![CDATA[step-by-step breakdown of how two <a href="https://twitter.com/EvanEdinger/status/1078358697921966081">very different phrases</a> can sound similar]]></description>
+								<content:encoded><![CDATA[<p>step-by-step breakdown of how two <a href="https://twitter.com/EvanEdinger/status/1078358697921966081">very different phrases</a> can sound similar</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Very Slow Movie Player</title>
+		<link>https://medium.com/@bryan/very-slow-movie-player-499f76c48b62?sk=deadb3073d5ef89fc425f61b1aabec5e</link>
+				<pubDate>Sun, 30 Dec 2018 23:06:08 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18406</guid>
+				<description><![CDATA[watching <em>2001: A Space Odyssey</em> on a custom ePaper display at 24 frames per hour]]></description>
+								<content:encoded><![CDATA[<p>watching <em>2001: A Space Odyssey</em> on a custom ePaper display at 24 frames per hour</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>How Much of the Internet Is Fake?</title>
+		<link>http://nymag.com/intelligencer/2018/12/how-much-of-the-internet-is-fake.html</link>
+				<pubDate>Thu, 27 Dec 2018 22:28:53 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18403</guid>
+				<description><![CDATA[Max Read on "the Inversion," the point when fake traffic is perceived as real by algorithms]]></description>
+								<content:encoded><![CDATA[<p>Max Read on &#8220;the Inversion,&#8221; the point when fake traffic is perceived as real by algorithms</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Some images Joe Veix saved to his laptop in 2018</title>
+		<link>https://medium.com/@joeveix/some-images-i-saved-to-my-laptop-in-2018-5e64555a2d54</link>
+				<pubDate>Thu, 27 Dec 2018 06:15:23 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18400</guid>
+				<description><![CDATA[this is an excellent use of Medium, and also, I want to subscribe to this newsletter please]]></description>
+								<content:encoded><![CDATA[<p>this is an excellent use of Medium, and also, I want to subscribe to this newsletter please</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Infinite Gift</title>
+		<link>https://christmasexperiments.com/2018/24/infinite-gift/</link>
+				<pubDate>Tue, 25 Dec 2018 18:31:55 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18397</guid>
+				<description><![CDATA[the final day of <a href="https://christmasexperiments.com/">Christmas XP</a>, the WebGL advent calendar]]></description>
+								<content:encoded><![CDATA[<p>the final day of <a href="https://christmasexperiments.com/">Christmas XP</a>, the WebGL advent calendar</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Recovering Nintendo’s Lost SimCity for the NES</title>
+		<link>https://gamehistory.org/simcity/</link>
+				<pubDate>Tue, 25 Dec 2018 18:17:57 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18395</guid>
+				<description><![CDATA[Frank Cifaldi's in-depth writeup on the unreleased prototype, with <a href="https://archive.org/details/simcity-nes">downloadable ROM</a>]]></description>
+								<content:encoded><![CDATA[<p>Frank Cifaldi&#8217;s in-depth writeup on the unreleased prototype, with <a href="https://archive.org/details/simcity-nes">downloadable ROM</a></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Turtletoy</title>
+		<link>https://turtletoy.net/turtle/browse/love/</link>
+				<pubDate>Sat, 15 Dec 2018 00:33:31 +0000</pubDate>
+		<dc:creator><![CDATA[Andy Baio]]></dc:creator>
+				<category><![CDATA[Links]]></category>
+
+		<guid isPermaLink="false">https://waxy.org/?p=18391</guid>
+				<description><![CDATA[make generative art using the <a href="https://turtletoy.net/syntax">Turtle graphics API</a>]]></description>
+								<content:encoded><![CDATA[<p>make generative art using the <a href="https://turtletoy.net/syntax">Turtle graphics API</a></p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>
