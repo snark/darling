@@ -7,6 +7,14 @@ import (
 	"time"
 )
 
+func Fetch(url string) (*gofeed.Feed, error) {
+	// TODO: Caching support
+	// TODO: Load from file
+	fp := gofeed.NewParser()
+	parsed, err := fp.ParseURL(url)
+	return parsed, err
+}
+
 func ProcessItems(parsedItems []*gofeed.Item, blacklistFilters []filter.ItemFilter, whitelistFilters []filter.ItemFilter) []*feeds.Item {
 	outitems := []*feeds.Item{}
 	for _, item := range parsedItems {

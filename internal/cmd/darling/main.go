@@ -3,11 +3,11 @@ package darling
 import (
 	"fmt"
 	"github.com/gorilla/feeds"
-	"github.com/mmcdole/gofeed"
+	"github.com/snark/darling/pkg/feed"
 	"github.com/snark/darling/pkg/filter"
-	"github.com/snark/darling/pkg/process"
 	"log"
 	"net/url"
+	"os"
 	"sort"
 	"sync"
 	"time"
@@ -35,7 +35,12 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []st
 			wg.Add(1)
 			go func() {
 				defer wg.Done()
-				outfeed.Items = append(outfeed.Items, parseFeedWithFilters(url, blacklistFilter, whitelistFilter)...)
+				f, err := feed.Fetch(url)
+				if err != nil {
+					fmt.Fprintln(os.Stderr, "Unable to fetch %s: %s", url, err)
+				} else {
+					outfeed.Items = append(outfeed.Items, feed.ProcessItems(f.Items, []filter.ItemFilter{blacklistFilter}, []filter.ItemFilter{whitelistFilter})...)
+				}
 			}()
 		}
 	}
@@ -57,16 +62,4 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []st
 func validateUrl(toTest string) bool {
 	uri, err := url.Parse(toTest)
 	return err == nil && (uri.Scheme == "http" || uri.Scheme == "https")
-}
-
-func parseFeedWithFilters(url string, blacklistFilter filter.ItemFilter, whitelistFilter filter.ItemFilter) []*feeds.Item {
-	fp := gofeed.NewParser()
-	parsed, err := fp.ParseURL(url)
-	items := []*feeds.Item{}
-	if err != nil {
-		fmt.Printf("unable to parse %s--skipping with error %s", url, err)
-	} else {
-		items = process.ProcessItems(parsed.Items, []filter.ItemFilter{blacklistFilter}, []filter.ItemFilter{whitelistFilter})
-	}
-	return items
 }
