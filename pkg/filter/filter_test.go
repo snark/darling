@@ -9,11 +9,6 @@ import (
 	"testing"
 )
 
-// NEEDS TESTING:
-// Match against Title
-// Match against Content
-// Match against Description
-
 func parsedFeedFromFile(fpath string) *gofeed.Feed {
 	file, _ := os.Open(fpath)
 	defer file.Close()
