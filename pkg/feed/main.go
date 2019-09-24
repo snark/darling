@@ -1,4 +1,4 @@
-package process
+package feed
 
 import (
 	"github.com/gorilla/feeds"
