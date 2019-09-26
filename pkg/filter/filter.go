@@ -10,15 +10,42 @@ type ItemFilter interface {
 	Match(gofeed.Item) bool
 }
 
+// Some basic Boolean logic types
+type TrueFilter struct {
+}
+
+type AndFilter struct {
+	Left  ItemFilter
+	Right ItemFilter
+}
+
+type OrFilter struct {
+	Left  ItemFilter
+	Right ItemFilter
+}
+
+type NotFilter struct {
+	Base ItemFilter
+}
+
 type RegexpFilter struct {
 	regexps []*regexp.Regexp
 }
 
-type TrueFilter struct {
-}
-
 func (filter TrueFilter) Match(i gofeed.Item) bool {
 	return true
+}
+
+func (filter AndFilter) Match(i gofeed.Item) bool {
+	return filter.Left.Match(i) && filter.Right.Match(i)
+}
+
+func (filter OrFilter) Match(i gofeed.Item) bool {
+	return filter.Left.Match(i) || filter.Right.Match(i)
+}
+
+func (filter NotFilter) Match(i gofeed.Item) bool {
+	return !filter.Base.Match(i)
 }
 
 // TODO: Does not currently handle item.Categories

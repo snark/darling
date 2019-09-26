@@ -17,6 +17,103 @@ func parsedFeedFromFile(fpath string) *gofeed.Feed {
 	return feed
 }
 
+func TestTrueFilter(t *testing.T) {
+	// Matches anything
+	trueFilter := filter.TrueFilter{}
+	file, _ := os.Open("../../testdata/lobste.rs.rss")
+	defer file.Close()
+	fp := gofeed.NewParser()
+	feed, _ := fp.Parse(file)
+	for i, _ := range feed.Items {
+		testname := fmt.Sprintf("Lobste.rs Item #%d", i)
+		t.Run(testname, func(t *testing.T) {
+			ans := trueFilter.Match(*feed.Items[i])
+			if ans != true {
+				t.Errorf("got %t, want true", ans)
+			}
+		})
+	}
+}
+
+func TestNotFilter(t *testing.T) {
+	// Matches anything
+	trueFilter := filter.TrueFilter{}
+	notFilter := filter.NotFilter{trueFilter}
+	file, _ := os.Open("../../testdata/lobste.rs.rss")
+	defer file.Close()
+	fp := gofeed.NewParser()
+	feed, _ := fp.Parse(file)
+	for i, _ := range feed.Items {
+		testname := fmt.Sprintf("Lobste.rs Item #%d", i)
+		t.Run(testname, func(t *testing.T) {
+			ans := notFilter.Match(*feed.Items[i])
+			if ans != false {
+				t.Errorf("got %t, want false", ans)
+			}
+		})
+	}
+}
+
+func TestOrFilter(t *testing.T) {
+	// Matches anything
+	trueFilter := filter.TrueFilter{}
+	notFilter := filter.NotFilter{trueFilter}
+	orFilter1 := filter.OrFilter{trueFilter, notFilter}
+	orFilter2 := filter.OrFilter{notFilter, trueFilter}
+	orFilter3 := filter.OrFilter{notFilter, notFilter}
+	file, _ := os.Open("../../testdata/lobste.rs.rss")
+	defer file.Close()
+	fp := gofeed.NewParser()
+	feed, _ := fp.Parse(file)
+	for i, _ := range feed.Items {
+		testname := fmt.Sprintf("Lobste.rs Item #%d", i)
+		t.Run(testname, func(t *testing.T) {
+			ans := orFilter1.Match(*feed.Items[i])
+			if ans != true {
+				t.Errorf("got %t, want true", ans)
+			}
+			ans2 := orFilter2.Match(*feed.Items[i])
+			if ans2 != true {
+				t.Errorf("got %t, want true", ans)
+			}
+			ans3 := orFilter3.Match(*feed.Items[i])
+			if ans3 != false {
+				t.Errorf("got %t, want false", ans)
+			}
+		})
+	}
+}
+
+func TestAndFilter(t *testing.T) {
+	// Matches anything
+	trueFilter := filter.TrueFilter{}
+	notFilter := filter.NotFilter{trueFilter}
+	andFilter1 := filter.AndFilter{trueFilter, notFilter}
+	andFilter2 := filter.AndFilter{notFilter, trueFilter}
+	andFilter3 := filter.AndFilter{trueFilter, trueFilter}
+	file, _ := os.Open("../../testdata/lobste.rs.rss")
+	defer file.Close()
+	fp := gofeed.NewParser()
+	feed, _ := fp.Parse(file)
+	for i, _ := range feed.Items {
+		testname := fmt.Sprintf("Lobste.rs Item #%d", i)
+		t.Run(testname, func(t *testing.T) {
+			ans := andFilter1.Match(*feed.Items[i])
+			if ans != false {
+				t.Errorf("got %t, want false ", ans)
+			}
+			ans2 := andFilter2.Match(*feed.Items[i])
+			if ans2 != false {
+				t.Errorf("got %t, want false ", ans)
+			}
+			ans3 := andFilter3.Match(*feed.Items[i])
+			if ans3 != true {
+				t.Errorf("got %t, want true", ans)
+			}
+		})
+	}
+}
+
 func TestRegexpFilterBasic(t *testing.T) {
 	// Create a filter and match it against some real data.
 	// We exercise case-insensitivity and word boundaries
@@ -126,23 +223,5 @@ func TestRegexpFilterWildcard(t *testing.T) {
 	filterType := reflect.TypeOf(wcFilter)
 	if filterType.String() != "filter.TrueFilter" {
 		t.Errorf("Wildcarded regexp filter yielded %s", filterType.String())
-	}
-}
-
-func TestTrueFilter(t *testing.T) {
-	// Matches anything
-	trueFilter := filter.TrueFilter{}
-	file, _ := os.Open("../../testdata/lobste.rs.rss")
-	defer file.Close()
-	fp := gofeed.NewParser()
-	feed, _ := fp.Parse(file)
-	for i, _ := range feed.Items {
-		testname := fmt.Sprintf("Lobste.rs Item #%d", i)
-		t.Run(testname, func(t *testing.T) {
-			ans := trueFilter.Match(*feed.Items[i])
-			if ans != true {
-				t.Errorf("got %t, want true", ans)
-			}
-		})
 	}
 }
