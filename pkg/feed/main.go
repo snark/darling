@@ -15,24 +15,17 @@ func Fetch(url string) (*gofeed.Feed, error) {
 	return parsed, err
 }
 
-func ProcessItems(parsedItems []*gofeed.Item, blacklistFilters []filter.ItemFilter, whitelistFilters []filter.ItemFilter) []*feeds.Item {
+func ProcessItems(parsedItems []*gofeed.Item, filters []filter.ItemFilter) []*feeds.Item {
 	outitems := []*feeds.Item{}
 	for _, item := range parsedItems {
-		blacklisted := false
-		whitelisted := false
-		for _, filter := range blacklistFilters {
+		matched := false
+		for _, filter := range filters {
 			if filter.Match(*item) {
-				blacklisted = true
+				matched = true
+				break
 			}
-			break
 		}
-		for _, filter := range whitelistFilters {
-			if filter.Match(*item) {
-				whitelisted = true
-			}
-			break
-		}
-		if !blacklisted || whitelisted {
+		if !matched {
 			// TODO: Currently unhandled:
 			// * Author
 			// * Enclosures
