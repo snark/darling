@@ -32,24 +32,24 @@ type RegexpFilter struct {
 	regexps []*regexp.Regexp
 }
 
-func (filter TrueFilter) Match(i gofeed.Item) bool {
+func (filter *TrueFilter) Match(i gofeed.Item) bool {
 	return true
 }
 
-func (filter AndFilter) Match(i gofeed.Item) bool {
+func (filter *AndFilter) Match(i gofeed.Item) bool {
 	return filter.Left.Match(i) && filter.Right.Match(i)
 }
 
-func (filter OrFilter) Match(i gofeed.Item) bool {
+func (filter *OrFilter) Match(i gofeed.Item) bool {
 	return filter.Left.Match(i) || filter.Right.Match(i)
 }
 
-func (filter NotFilter) Match(i gofeed.Item) bool {
+func (filter *NotFilter) Match(i gofeed.Item) bool {
 	return !filter.Base.Match(i)
 }
 
 // TODO: Does not currently handle item.Categories
-func (filter RegexpFilter) Match(i gofeed.Item) bool {
+func (filter *RegexpFilter) Match(i gofeed.Item) bool {
 	found := false
 	for _, re := range filter.regexps {
 		if re.MatchString(i.Content) {
@@ -74,7 +74,7 @@ func NewRegexpFilter(words []string) ItemFilter {
 		}
 	}
 	if wildcard {
-		return TrueFilter{}
+		return &TrueFilter{}
 	} else {
 		reSlice := []*regexp.Regexp{}
 		for _, word := range words {
@@ -87,6 +87,6 @@ func NewRegexpFilter(words []string) ItemFilter {
 				}
 			}
 		}
-		return RegexpFilter{regexps: reSlice}
+		return &RegexpFilter{regexps: reSlice}
 	}
 }

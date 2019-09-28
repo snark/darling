@@ -19,8 +19,8 @@ func ProcessItems(parsedItems []*gofeed.Item, filters []filter.ItemFilter) []*fe
 	outitems := []*feeds.Item{}
 	for _, item := range parsedItems {
 		matched := false
-		for _, filter := range filters {
-			if filter.Match(*item) {
+		for i := range filters {
+			if filters[i].Match(*item) {
 				matched = true
 				break
 			}

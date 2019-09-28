@@ -18,7 +18,7 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []st
 
 	blacklist := filter.NewRegexpFilter(blacklistWords)
 	whitelist := filter.NewRegexpFilter(whitelistWords)
-	wordMatch := filter.AndFilter{blacklist, filter.NotFilter{whitelist}}
+	wordMatch := filter.AndFilter{blacklist, &filter.NotFilter{whitelist}}
 
 	now := time.Now()
 	outfeed := &feeds.Feed{
@@ -34,15 +34,15 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []st
 		// TODO: Warning messages on bad URLs
 		if validateUrl(url) {
 			wg.Add(1)
-			go func() {
+			go func(u string, filters []filter.ItemFilter) {
 				defer wg.Done()
-				f, err := feed.Fetch(url)
+				f, err := feed.Fetch(u)
 				if err != nil {
-					fmt.Fprintln(os.Stderr, "Unable to fetch %s: %s", url, err)
+					fmt.Fprintln(os.Stderr, "Unable to fetch %s: %s", u, err)
 				} else {
-					outfeed.Items = append(outfeed.Items, feed.ProcessItems(f.Items, []filter.ItemFilter{wordMatch})...)
+					outfeed.Items = append(outfeed.Items, feed.ProcessItems(f.Items, filters)...)
 				}
-			}()
+			}(url, []filter.ItemFilter{&wordMatch})
 		}
 	}
 	wg.Wait()

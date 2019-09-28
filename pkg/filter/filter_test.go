@@ -38,7 +38,7 @@ func TestTrueFilter(t *testing.T) {
 func TestNotFilter(t *testing.T) {
 	// Matches anything
 	trueFilter := filter.TrueFilter{}
-	notFilter := filter.NotFilter{trueFilter}
+	notFilter := filter.NotFilter{&trueFilter}
 	file, _ := os.Open("../../testdata/lobste.rs.rss")
 	defer file.Close()
 	fp := gofeed.NewParser()
@@ -57,10 +57,10 @@ func TestNotFilter(t *testing.T) {
 func TestOrFilter(t *testing.T) {
 	// Matches anything
 	trueFilter := filter.TrueFilter{}
-	notFilter := filter.NotFilter{trueFilter}
-	orFilter1 := filter.OrFilter{trueFilter, notFilter}
-	orFilter2 := filter.OrFilter{notFilter, trueFilter}
-	orFilter3 := filter.OrFilter{notFilter, notFilter}
+	notFilter := filter.NotFilter{&trueFilter}
+	orFilter1 := filter.OrFilter{&trueFilter, &notFilter}
+	orFilter2 := filter.OrFilter{&notFilter, &trueFilter}
+	orFilter3 := filter.OrFilter{&notFilter, &notFilter}
 	file, _ := os.Open("../../testdata/lobste.rs.rss")
 	defer file.Close()
 	fp := gofeed.NewParser()
@@ -87,10 +87,10 @@ func TestOrFilter(t *testing.T) {
 func TestAndFilter(t *testing.T) {
 	// Matches anything
 	trueFilter := filter.TrueFilter{}
-	notFilter := filter.NotFilter{trueFilter}
-	andFilter1 := filter.AndFilter{trueFilter, notFilter}
-	andFilter2 := filter.AndFilter{notFilter, trueFilter}
-	andFilter3 := filter.AndFilter{trueFilter, trueFilter}
+	notFilter := filter.NotFilter{&trueFilter}
+	andFilter1 := filter.AndFilter{&trueFilter, &notFilter}
+	andFilter2 := filter.AndFilter{&notFilter, &trueFilter}
+	andFilter3 := filter.AndFilter{&trueFilter, &trueFilter}
 	file, _ := os.Open("../../testdata/lobste.rs.rss")
 	defer file.Close()
 	fp := gofeed.NewParser()
@@ -221,7 +221,7 @@ func TestRegexpFilterWildcard(t *testing.T) {
 		"bar",
 	})
 	filterType := reflect.TypeOf(wcFilter)
-	if filterType.String() != "filter.TrueFilter" {
+	if filterType.String() != "*filter.TrueFilter" {
 		t.Errorf("Wildcarded regexp filter yielded %s", filterType.String())
 	}
 }
