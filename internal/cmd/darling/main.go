@@ -16,9 +16,9 @@ import (
 func FilterFeeds(blacklistWords []string, whitelistWords []string, limit *int, feedUrls []string) {
 	var wg sync.WaitGroup
 
-	blacklist := filter.NewRegexpFilter(blacklistWords)
-	whitelist := filter.NewRegexpFilter(whitelistWords)
-	wordMatch := filter.OrFilter{&filter.NotFilter{blacklist}, whitelist}
+	blacklist := filter.NewRegexp(blacklistWords)
+	whitelist := filter.NewRegexp(whitelistWords)
+	wordMatch := filter.Or{&filter.Not{blacklist}, whitelist}
 
 	now := time.Now()
 	outfeed := &feeds.Feed{
@@ -36,7 +36,7 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, limit *int, f
 			wg.Add(1)
 			go func(u string, filters []filter.ItemFilter) {
 				if *limit > 0 {
-					filters = append(filters, &filter.CountFilter{Limit: *limit})
+					filters = append(filters, &filter.Count{Limit: *limit})
 				}
 				defer wg.Done()
 				f, err := feed.Fetch(u)

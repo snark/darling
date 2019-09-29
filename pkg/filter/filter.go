@@ -11,50 +11,50 @@ type ItemFilter interface {
 }
 
 // Some basic Boolean logic types
-type TrueFilter struct {
+type True struct {
 }
 
-type AndFilter struct {
+type And struct {
 	Left  ItemFilter
 	Right ItemFilter
 }
 
-type OrFilter struct {
+type Or struct {
 	Left  ItemFilter
 	Right ItemFilter
 }
 
-type NotFilter struct {
+type Not struct {
 	Base ItemFilter
 }
 
-type CountFilter struct {
+type Count struct {
 	Limit int
 	count int
 }
 
-type RegexpFilter struct {
+type Regexp struct {
 	regexps []*regexp.Regexp
 }
 
-func (filter *TrueFilter) Match(i gofeed.Item) bool {
+func (filter *True) Match(i gofeed.Item) bool {
 	return true
 }
 
-func (filter *AndFilter) Match(i gofeed.Item) bool {
+func (filter *And) Match(i gofeed.Item) bool {
 	return filter.Left.Match(i) && filter.Right.Match(i)
 }
 
-func (filter *OrFilter) Match(i gofeed.Item) bool {
+func (filter *Or) Match(i gofeed.Item) bool {
 	return filter.Left.Match(i) || filter.Right.Match(i)
 }
 
-func (filter *NotFilter) Match(i gofeed.Item) bool {
+func (filter *Not) Match(i gofeed.Item) bool {
 	return !filter.Base.Match(i)
 }
 
 // Definitionally not idempotent!
-func (filter *CountFilter) Match(i gofeed.Item) bool {
+func (filter *Count) Match(i gofeed.Item) bool {
 	if filter.Limit == 0 {
 		return true
 	}
@@ -63,7 +63,7 @@ func (filter *CountFilter) Match(i gofeed.Item) bool {
 }
 
 // TODO: Does not currently handle item.Categories
-func (filter *RegexpFilter) Match(i gofeed.Item) bool {
+func (filter *Regexp) Match(i gofeed.Item) bool {
 	found := false
 	for _, re := range filter.regexps {
 		if re.MatchString(i.Content) {
@@ -79,7 +79,7 @@ func (filter *RegexpFilter) Match(i gofeed.Item) bool {
 
 // TODO: Allow case-sensitive matching?
 // TODO: Log error
-func NewRegexpFilter(words []string) ItemFilter {
+func NewRegexp(words []string) ItemFilter {
 	wildcard := false
 	for _, word := range words {
 		if word == "*" {
@@ -88,7 +88,7 @@ func NewRegexpFilter(words []string) ItemFilter {
 		}
 	}
 	if wildcard {
-		return &TrueFilter{}
+		return &True{}
 	} else {
 		reSlice := []*regexp.Regexp{}
 		for _, word := range words {
@@ -101,6 +101,6 @@ func NewRegexpFilter(words []string) ItemFilter {
 				}
 			}
 		}
-		return &RegexpFilter{regexps: reSlice}
+		return &Regexp{regexps: reSlice}
 	}
 }
