@@ -18,14 +18,14 @@ func Fetch(url string) (*gofeed.Feed, error) {
 func ProcessItems(parsedItems []*gofeed.Item, filters []filter.ItemFilter) []*feeds.Item {
 	outitems := []*feeds.Item{}
 	for _, item := range parsedItems {
-		matched := false
+		missed := false
 		for i := range filters {
-			if filters[i].Match(*item) {
-				matched = true
+			if !filters[i].Match(*item) {
+				missed = true
 				break
 			}
 		}
-		if !matched {
+		if !missed {
 			// TODO: Currently unhandled:
 			// * Author
 			// * Enclosures

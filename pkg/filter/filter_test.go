@@ -114,6 +114,30 @@ func TestAndFilter(t *testing.T) {
 	}
 }
 
+func TestCountFilter(t *testing.T) {
+	// Matches anything
+	count1 := filter.CountFilter{Limit: 4}
+	count2 := filter.CountFilter{Limit: 0}
+	file, _ := os.Open("../../testdata/lobste.rs.rss")
+	defer file.Close()
+	fp := gofeed.NewParser()
+	feed, _ := fp.Parse(file)
+	for i, _ := range feed.Items {
+		testname := fmt.Sprintf("Lobste.rs Item #%d", i)
+		t.Run(testname, func(t *testing.T) {
+			ans1 := count1.Match(*feed.Items[i])
+			expected := i < 4
+			if ans1 != expected {
+				t.Errorf("got %t, want %t", ans1, expected)
+			}
+			ans2 := count2.Match(*feed.Items[i])
+			if ans2 != true {
+				t.Errorf("got %t, want true", ans2)
+			}
+		})
+	}
+}
+
 func TestRegexpFilterBasic(t *testing.T) {
 	// Create a filter and match it against some real data.
 	// We exercise case-insensitivity and word boundaries

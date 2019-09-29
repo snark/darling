@@ -18,7 +18,7 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []st
 
 	blacklist := filter.NewRegexpFilter(blacklistWords)
 	whitelist := filter.NewRegexpFilter(whitelistWords)
-	wordMatch := filter.AndFilter{blacklist, &filter.NotFilter{whitelist}}
+	wordMatch := filter.OrFilter{&filter.NotFilter{blacklist}, whitelist}
 
 	now := time.Now()
 	outfeed := &feeds.Feed{
@@ -38,7 +38,7 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []st
 				defer wg.Done()
 				f, err := feed.Fetch(u)
 				if err != nil {
-					fmt.Fprintln(os.Stderr, "Unable to fetch %s: %s", u, err)
+					fmt.Fprintf(os.Stderr, "Unable to fetch %s: %s", u, err)
 				} else {
 					outfeed.Items = append(outfeed.Items, feed.ProcessItems(f.Items, filters)...)
 				}

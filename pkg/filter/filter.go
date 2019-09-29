@@ -28,6 +28,11 @@ type NotFilter struct {
 	Base ItemFilter
 }
 
+type CountFilter struct {
+	Limit int
+	count int
+}
+
 type RegexpFilter struct {
 	regexps []*regexp.Regexp
 }
@@ -46,6 +51,15 @@ func (filter *OrFilter) Match(i gofeed.Item) bool {
 
 func (filter *NotFilter) Match(i gofeed.Item) bool {
 	return !filter.Base.Match(i)
+}
+
+// Definitionally not idempotent!
+func (filter *CountFilter) Match(i gofeed.Item) bool {
+	if filter.Limit == 0 {
+		return true
+	}
+	filter.count = filter.count + 1
+	return filter.count <= filter.Limit
 }
 
 // TODO: Does not currently handle item.Categories
