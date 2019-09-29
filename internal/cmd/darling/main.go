@@ -13,7 +13,7 @@ import (
 	"time"
 )
 
-func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []string) {
+func FilterFeeds(blacklistWords []string, whitelistWords []string, limit *int, feedUrls []string) {
 	var wg sync.WaitGroup
 
 	blacklist := filter.NewRegexpFilter(blacklistWords)
@@ -35,6 +35,9 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, feedUrls []st
 		if validateUrl(url) {
 			wg.Add(1)
 			go func(u string, filters []filter.ItemFilter) {
+				if *limit > 0 {
+					filters = append(filters, &filter.CountFilter{Limit: *limit})
+				}
 				defer wg.Done()
 				f, err := feed.Fetch(u)
 				if err != nil {
