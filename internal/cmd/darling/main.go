@@ -5,6 +5,7 @@ import (
 	"github.com/gorilla/feeds"
 	"github.com/snark/darling/pkg/feed"
 	"github.com/snark/darling/pkg/filter"
+	"github.com/snark/darling/pkg/output"
 	"log"
 	"net/url"
 	"os"
@@ -54,13 +55,12 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, limit *int, f
 		return outfeed.Items[a].Created.After(outfeed.Items[b].Created)
 	})
 
-	atom, err := outfeed.ToAtom()
+	result, err := output.FeedToRss(outfeed)
 	if err != nil {
 		log.Fatal(err)
+	} else {
+		fmt.Println(result)
 	}
-	// TODO: Handle error
-	_ = atom
-	fmt.Println(atom)
 }
 
 func validateUrl(toTest string) bool {
