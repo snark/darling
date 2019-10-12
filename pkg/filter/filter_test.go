@@ -7,6 +7,7 @@ import (
 	"os"
 	"reflect"
 	"testing"
+	"time"
 )
 
 func parsedFeedFromFile(fpath string) *gofeed.Feed {
@@ -247,5 +248,71 @@ func TestRegexpWildcard(t *testing.T) {
 	filterType := reflect.TypeOf(wc)
 	if filterType.String() != "*filter.True" {
 		t.Errorf("Wildcarded regexp filter yielded %s", filterType.String())
+	}
+}
+
+func TestNewSinceDuration(t *testing.T) {
+	origin := "2019-10-12T16:25:00Z"
+	fakeNow, _ := time.Parse(time.RFC3339, origin)
+	var tests = []struct {
+		duration string
+		expected string
+	}{
+		{"30S", "2019-10-12T16:24:30Z"},
+		{"15M", "2019-10-12T16:10:00Z"},
+		{"12H", "2019-10-12T04:25:00Z"},
+		{"1d", "2019-10-11T16:25:00Z"},
+		{"3m", "2019-07-12T16:25:00Z"},
+		{"1Y", "2018-10-12T16:25:00Z"},
+	}
+	for _, tt := range tests {
+		testname := fmt.Sprintf("Generating Since filter for %s", tt.duration)
+		t.Run(testname, func(t *testing.T) {
+			f, _ := filter.NewSince(&tt.duration, fakeNow)
+			expectedTime, _ := time.Parse(time.RFC3339, tt.expected)
+			beforeTime := expectedTime.Add(-1 * time.Second)
+			afterTime := expectedTime.Add(1 * time.Second)
+			beforeItem := gofeed.Item{
+				Title:           "Test",
+				PublishedParsed: &beforeTime,
+			}
+			afterItem := gofeed.Item{
+				Title:           "Test",
+				PublishedParsed: &afterTime,
+			}
+			if f.Match(beforeItem) {
+				t.Errorf("Since filter for %s matched one second before %s with now at %s", tt.duration, tt.expected, origin)
+			}
+			if !f.Match(afterItem) {
+				t.Errorf("Since filter for %s did not match one second after %s with now at %s", tt.duration, tt.expected, origin)
+			}
+		})
+	}
+}
+
+func TestNewSinceTimestamp(t *testing.T) {
+	timestamp, _ := time.Parse(time.RFC3339, "2019-10-12T16:25:00Z")
+	i := gofeed.Item{
+		Title:           "Test",
+		PublishedParsed: &timestamp,
+	}
+	var tests = []struct {
+		when     string
+		expected bool
+	}{
+		{"2019-10-12", true},
+		{"2019-10-13", false},
+		{"2019-10-12T04:24:00Z", true},
+		{"2019-10-12T04:26:00Z", true},
+	}
+	for _, tt := range tests {
+		testname := fmt.Sprintf("Generating Since filter for %s", tt.when)
+		t.Run(testname, func(t *testing.T) {
+			f, _ := filter.NewSince(&tt.when, time.Now())
+			ans := f.Match(i)
+			if ans != tt.expected {
+				t.Errorf("Since filter for %s expected %t, got %t for 2019-10-12T16:25:00Z", tt.when, tt.expected, ans)
+			}
+		})
 	}
 }

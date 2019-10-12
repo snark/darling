@@ -14,12 +14,20 @@ import (
 	"time"
 )
 
-func FilterFeeds(blacklistWords []string, whitelistWords []string, limit *int, feedUrls []string) {
+func FilterFeeds(blacklistWords []string, whitelistWords []string, since *string, limit *int, feedUrls []string) {
 	var wg sync.WaitGroup
 
 	blacklist := filter.NewRegexp(blacklistWords)
 	whitelist := filter.NewRegexp(whitelistWords)
 	wordMatch := filter.Or{&filter.Not{blacklist}, whitelist}
+	var sinceMatch filter.ItemFilter
+	var err error
+	if *since != "" {
+		sinceMatch, err = filter.NewSince(since, time.Now())
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
 
 	now := time.Now()
 	outfeed := &feeds.Feed{
@@ -31,6 +39,10 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, limit *int, f
 		Author: &feeds.Author{Name: "You"},
 	}
 	outfeed.Items = []*feeds.Item{}
+	filterList := []filter.ItemFilter{&wordMatch}
+	if sinceMatch != nil {
+		filterList = append(filterList, sinceMatch)
+	}
 	for _, url := range feedUrls {
 		// TODO: Warning messages on bad URLs
 		if validateUrl(url) {
@@ -46,7 +58,7 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, limit *int, f
 				} else {
 					outfeed.Items = append(outfeed.Items, feed.ProcessItems(f.Items, filters)...)
 				}
-			}(url, []filter.ItemFilter{&wordMatch})
+			}(url, filterList)
 		}
 	}
 	wg.Wait()
