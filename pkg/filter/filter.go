@@ -87,7 +87,13 @@ func (filter *Regexp) Match(i gofeed.Item) bool {
 // TODO: Allow additional arguments allowing us to also check
 // updated times.
 func (filter *Since) Match(i gofeed.Item) bool {
-	return i.PublishedParsed.After(filter.When)
+	if i.PublishedParsed != nil {
+		return i.PublishedParsed.After(filter.When)
+	}
+	if i.UpdatedParsed != nil {
+		return i.UpdatedParsed.After(filter.When)
+	}
+	return false
 }
 
 // TODO: Allow case-sensitive matching?
