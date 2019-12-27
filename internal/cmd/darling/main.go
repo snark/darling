@@ -14,7 +14,7 @@ import (
 	"time"
 )
 
-func FilterFeeds(blacklistWords []string, whitelistWords []string, since *string, limit *int, feedUrls []string) {
+func FilterFeeds(blacklistWords []string, whitelistWords []string, since *string, limit *int, outputType *string, feedUrls []string) {
 	var wg sync.WaitGroup
 
 	blacklist := filter.NewRegexp(blacklistWords)
@@ -67,7 +67,12 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, since *string
 		return outfeed.Items[a].Created.After(outfeed.Items[b].Created)
 	})
 
-	result, err := output.FeedToRss(outfeed)
+	var result string
+	if *outputType == "atom" {
+		result, err = output.FeedToAtom(outfeed)
+	} else {
+		result, err = output.FeedToRss(outfeed)
+	}
 	if err != nil {
 		log.Fatal(err)
 	} else {

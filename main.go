@@ -29,6 +29,7 @@ func main() {
 	flag.VarP(&whitelistWords, "whitelist", "w", "whitelist term")
 	var number = flag.IntP("limit", "n", 0, "restrict to n matching items per feed")
 	var after = flag.String("since", "", "restrict to items after a given time")
+	var outputType = flag.String("output", "", "output type ('rss' or 'atom'; rss is default)")
 	flag.Usage = func() {
 		fmt.Printf("Usage: darling [options] <feed_url>...\n")
 		flag.PrintDefaults()
@@ -37,7 +38,7 @@ func main() {
 	tail := flag.Args()
 
 	if len(tail) > 0 && *number >= 0 {
-		darling.FilterFeeds(blacklistWords, whitelistWords, after, number, tail)
+		darling.FilterFeeds(blacklistWords, whitelistWords, after, number, outputType, tail)
 	} else {
 		flag.Usage()
 	}
