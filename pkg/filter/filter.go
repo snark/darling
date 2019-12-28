@@ -157,6 +157,8 @@ func NewSince(when *string, now time.Time) (ItemFilter, error) {
 		case "Y":
 			d = now.AddDate(-1*num, 0, 0)
 		default:
+			// This should be unreachable, but there's no way to
+			// signal that to the coverage checker.
 			return &True{}, fmt.Errorf("Unable to parse %s", *when)
 		}
 		return &Since{When: d}, nil
@@ -166,8 +168,6 @@ func NewSince(when *string, now time.Time) (ItemFilter, error) {
 			d, err = time.Parse(dateLayout, *when)
 		}
 		if err != nil {
-			// This should be unreachable, but there's no way to
-			// signal that to the coverage checker.
 			return &True{}, fmt.Errorf("Unable to parse %s", *when)
 		}
 		return &Since{When: d}, nil
