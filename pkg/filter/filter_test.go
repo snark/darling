@@ -349,11 +349,11 @@ func TestNewSinceTimestamp(t *testing.T) {
 }
 
 func TestNewSinceUnparseable(t *testing.T) {
-	nogood := []string{"", "100", "32x", "2019-10-12T", "2019"}
+	nogood := []string{"", "100", "32x", "2019-10-12T", "2019", "2019-13-01", "2019-10-32", "2019-10-01-01"}
 	for _, which := range nogood {
 		_, err := filter.NewSince(&which, time.Now())
 		if err == nil {
-			t.Errorf("did not throw error on unparseable since string")
+			t.Errorf("did not throw error on unparseable since string %s", which)
 		}
 	}
 }
