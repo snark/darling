@@ -138,6 +138,8 @@ func NewSince(when *string, now time.Time) (ItemFilter, error) {
 	if len(whenMatch) == 3 {
 		num, err := strconv.Atoi(whenMatch[1])
 		if err != nil {
+			// This should be unreachable, but there's no way to
+			// signal that to the coverage checker.
 			return &True{}, fmt.Errorf("Unable to parse %s", *when)
 		}
 		var d time.Time
@@ -164,6 +166,8 @@ func NewSince(when *string, now time.Time) (ItemFilter, error) {
 			d, err = time.Parse(dateLayout, *when)
 		}
 		if err != nil {
+			// This should be unreachable, but there's no way to
+			// signal that to the coverage checker.
 			return &True{}, fmt.Errorf("Unable to parse %s", *when)
 		}
 		return &Since{When: d}, nil

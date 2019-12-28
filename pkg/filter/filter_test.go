@@ -290,11 +290,38 @@ func TestNewSinceDuration(t *testing.T) {
 	}
 }
 
+func TestNewSinceAgainstNoTimeItem(t *testing.T) {
+	i := gofeed.Item{
+		Title: "Test",
+	}
+	var tests = []struct {
+		when     string
+		expected bool
+	}{
+		{"2019-10-30", false},
+		{"7d", false},
+	}
+	for _, tt := range tests {
+		testname := fmt.Sprintf("Generating Since filter for %s", tt.when)
+		t.Run(testname, func(t *testing.T) {
+			f, _ := filter.NewSince(&tt.when, time.Now())
+			ans := f.Match(i)
+			if ans != tt.expected {
+				t.Errorf("Since filter for %s expected %t, got %t for timestampless item", tt.when, tt.expected, ans)
+			}
+		})
+	}
+}
+
 func TestNewSinceTimestamp(t *testing.T) {
 	timestamp, _ := time.Parse(time.RFC3339, "2019-10-12T16:25:00Z")
 	i := gofeed.Item{
 		Title:           "Test",
 		PublishedParsed: &timestamp,
+	}
+	i2 := gofeed.Item{
+		Title:         "Test",
+		UpdatedParsed: &timestamp,
 	}
 	var tests = []struct {
 		when     string
@@ -313,6 +340,20 @@ func TestNewSinceTimestamp(t *testing.T) {
 			if ans != tt.expected {
 				t.Errorf("Since filter for %s expected %t, got %t for 2019-10-12T16:25:00Z", tt.when, tt.expected, ans)
 			}
+			ans2 := f.Match(i2)
+			if ans2 != tt.expected {
+				t.Errorf("Since filter for %s expected %t, got %t for 2019-10-12T16:25:00Z", tt.when, tt.expected, ans2)
+			}
 		})
+	}
+}
+
+func TestNewSinceUnparseable(t *testing.T) {
+	nogood := []string{"", "100", "32x", "2019-10-12T", "2019"}
+	for _, which := range nogood {
+		_, err := filter.NewSince(&which, time.Now())
+		if err == nil {
+			t.Errorf("did not throw error on unparseable since string")
+		}
 	}
 }
