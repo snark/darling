@@ -9,9 +9,14 @@ import (
 
 func Fetch(url string) (*gofeed.Feed, error) {
 	// TODO: Caching support
-	// TODO: Load from file
 	fp := gofeed.NewParser()
 	parsed, err := fp.ParseURL(url)
+	return parsed, err
+}
+
+func ParseFromString(s string) (*gofeed.Feed, error) {
+	fp := gofeed.NewParser()
+	parsed, err := fp.ParseString(s)
 	return parsed, err
 }
 

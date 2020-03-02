@@ -31,7 +31,7 @@ func main() {
 	var after = flag.String("since", "", "restrict to items after a given time")
 	var outputType = flag.String("output", "", "output type ('rss' or 'atom'; rss is default)")
 	flag.Usage = func() {
-		fmt.Printf("Usage: darling [options] <feed_url>...\n")
+		fmt.Printf("Usage: darling [options] <feed url or path>...\n")
 		flag.PrintDefaults()
 	}
 	flag.Parse()
