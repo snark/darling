@@ -35,7 +35,7 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, since *string
 		Title:       "Darling",
 		Description: "Your darlings, killfiled",
 		Created:     now,
-		// Link and Author are absolutetly erquired by feeds
+		// Link and Author are required by feeds
 		Link:   &feeds.Link{Href: ""},
 		Author: &feeds.Author{Name: "You"},
 	}
