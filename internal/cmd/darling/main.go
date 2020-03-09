@@ -1,6 +1,8 @@
 package darling
 
 import (
+	"bufio"
+	"bytes"
 	"fmt"
 	"github.com/gorilla/feeds"
 	"github.com/snark/darling/pkg/feed"
@@ -44,6 +46,30 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, since *string
 	if sinceMatch != nil {
 		filterList = append(filterList, sinceMatch)
 	}
+	// Optionally accept STDIN
+	stdinStat, err := os.Stdin.Stat()
+	if err != nil {
+		panic(err)
+	}
+	if stdinStat.Mode()&os.ModeCharDevice == 0 && stdinStat.Size() > 0 {
+		reader := bufio.NewReader(os.Stdin)
+		wg.Add(1)
+		go func(r *bufio.Reader, filters []filter.ItemFilter) {
+			if *limit > 0 {
+				filters = append(filters, &filter.Count{Limit: *limit})
+			}
+			defer wg.Done()
+			buf := new(bytes.Buffer)
+			buf.ReadFrom(r)
+			s := buf.String()
+			f, err := feed.ParseFromString(string(s))
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Unable to parse stdin: %s\n", err)
+			} else {
+				outfeed.Items = append(outfeed.Items, feed.ProcessItems(f.Items, filters)...)
+			}
+		}(reader, filterList)
+	}
 	for _, token := range feedTokens {
 		if validateUrl(token) {
 			wg.Add(1)
@@ -54,7 +80,7 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, since *string
 				defer wg.Done()
 				f, err := feed.Fetch(u)
 				if err != nil {
-					fmt.Fprintf(os.Stderr, "Unable to fetch %s: %s", u, err)
+					fmt.Fprintf(os.Stderr, "Unable to fetch %s: %s\n", u, err)
 				} else {
 					outfeed.Items = append(outfeed.Items, feed.ProcessItems(f.Items, filters)...)
 				}
@@ -68,25 +94,25 @@ func FilterFeeds(blacklistWords []string, whitelistWords []string, since *string
 				defer wg.Done()
 				file, err := os.Open(fp)
 				if err != nil {
-					fmt.Fprintf(os.Stderr, "Unable to read %s: %s", fp, err)
+					fmt.Fprintf(os.Stderr, "Unable to read %s: %s\n", fp, err)
 					return
 				} else {
 					defer file.Close()
 					buf, err := ioutil.ReadAll(file)
 					if err != nil {
-						fmt.Fprintf(os.Stderr, "Unable to read %s: %s", fp, err)
+						fmt.Fprintf(os.Stderr, "Unable to read %s: %s\n", fp, err)
 						return
 					}
 					f, err := feed.ParseFromString(string(buf))
 					if err != nil {
-						fmt.Fprintf(os.Stderr, "Unable to read %s: %s", fp, err)
+						fmt.Fprintf(os.Stderr, "Unable to read %s: %s\n", fp, err)
 					} else {
 						outfeed.Items = append(outfeed.Items, feed.ProcessItems(f.Items, filters)...)
 					}
 				}
 			}(token, filterList)
 		} else {
-			fmt.Fprintf(os.Stderr, "Unable to process %s as a feed location", token)
+			fmt.Fprintf(os.Stderr, "Unable to process %s as a feed location\n", token)
 		}
 		// TODO: Warning messages on bad tokens
 	}

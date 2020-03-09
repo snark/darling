@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/snark/darling/internal/cmd/darling"
 	flag "github.com/spf13/pflag"
+	"os"
 	"strings"
 )
 
@@ -36,8 +37,13 @@ func main() {
 	}
 	flag.Parse()
 	tail := flag.Args()
+	stdinStat, err := os.Stdin.Stat()
+	if err != nil {
+		panic(err)
+	}
+	hasPipe := stdinStat.Mode()&os.ModeCharDevice == 0 && stdinStat.Size() > 0
 
-	if len(tail) > 0 && *number >= 0 {
+	if (hasPipe || len(tail) > 0) && *number >= 0 {
 		darling.FilterFeeds(blacklistWords, whitelistWords, after, number, outputType, tail)
 	} else {
 		flag.Usage()
